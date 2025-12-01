@@ -1,156 +1,291 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Block Puzzle Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Block Scramble</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
+```
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      line-height: 1.7;
-      color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
     }
 
-    h1, h2 {
-      color: #111;
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        animation: fadeIn 0.6s ease-out;
     }
 
-    a {
-      color: #007aff;
-      text-decoration: none;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    a:hover {
-      text-decoration: underline;
+    .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 30px;
+        text-align: center;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 30px 0;
+    .header h1 {
+        font-size: 2.8em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
-  </style>
+
+    .header .subtitle {
+        font-size: 1.1em;
+        opacity: 0.95;
+        margin-top: 10px;
+    }
+
+    .last-updated {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 15px 30px;
+        text-align: center;
+        font-weight: bold;
+        color: #d63031;
+        font-size: 1.05em;
+    }
+
+    .content {
+        padding: 40px 30px;
+    }
+
+    .section {
+        margin-bottom: 35px;
+        padding: 25px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 15px;
+        border-left: 5px solid #667eea;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .section h2 {
+        color: #667eea;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 1.2em;
+    }
+
+    .section p, .section li {
+        line-height: 1.8;
+        color: #555;
+        font-size: 1.05em;
+        margin-bottom: 12px;
+    }
+
+    .section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .highlight-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .highlight-box strong {
+        color: #764ba2;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #f093fb;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li:before {
+        content: "• ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    .contact-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+        color: #764ba2;
+        text-decoration: underline;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 1em;
+        opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+        .header h1 {
+            font-size: 2em;
+        }
+        
+        .content {
+            padding: 30px 20px;
+        }
+        
+        .section {
+            padding: 20px;
+        }
+    }
+</style>
+```
+
 </head>
-
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Privacy Policy</h1>
+            <p class="subtitle">Block Scramble</p>
+        </div>
 
-  <h1>Privacy Policy – Block Scramble!</h1>
-  <p><strong>Last Updated:</strong> November 2025</p>
+```
+    <div class="last-updated">
+        Last Updated: December 2025
+    </div>
 
-  <p>
-    This Privacy Policy explains how our mobile game (“the App”) handles user
-    data. The App is developed and published by <strong>MIAN MUHAMMAD ATHAR</strong>
-    (“we”, “us”, “our”). By using the App, you agree to the terms described in this policy.
-  </p>
+    <div class="content">
+        <div class="section">
+            <h2><span class="icon">📋</span> Overview</h2>
+            <p>This Privacy Policy explains how our mobile game ("the App") handles user data. The App is developed and published by <strong>MIAN MUHAMMAD ATHAR</strong> ("we", "us", "our"). By using the App, you agree to the terms described in this policy.</p>
+            <div class="highlight-box">
+                <p><strong>Important:</strong> Block Scramble is designed as an offline-first game. We prioritize your privacy and data security by minimizing data collection.</p>
+            </div>
+        </div>
 
-  <hr />
+        <div class="section">
+            <h2><span class="icon">🛍️</span> In-App Purchases</h2>
+            <p>The App includes optional in-app purchases. All transactions are processed securely through the <strong>Apple App Store</strong>.</p>
+            <div class="highlight-box">
+                <p><strong>We do not receive or store any payment or billing information.</strong> All payment processing is handled entirely by Apple, following their security standards and privacy policies.</p>
+            </div>
+        </div>
 
-  <h2>1. Information We Collect</h2>
+        <div class="section">
+            <h2><span class="icon">📊</span> Data Collection</h2>
+            <p>As of the current version of the App, <strong>we do not collect, store, or transmit any personal data</strong>.</p>
+            <p>In future updates, we may integrate advertising or analytics services such as:</p>
+            <ul>
+                <li>Google AdMob (for advertisements)</li>
+                <li>Google Analytics for Firebase (for usage analytics)</li>
+            </ul>
+            <p>If these features are added, non-personal device information or usage data may be collected automatically by the third-party SDKs. Any such collection will be disclosed in an updated Privacy Policy before it becomes active.</p>
+        </div>
 
-  <h3>1.1 Current Data Collection</h3>
-  <p>
-    As of the current version of the App:
-  </p>
-  <ul>
-    <li>We <strong>do not collect any personal data</strong> from users.</li>
-    <li>No analytics tools, crash reporting services, or tracking technologies are integrated.</li>
-    <li>We do not collect names, email addresses, phone numbers, location data, or device identifiers.</li>
-  </ul>
+        <div class="section">
+            <h2><span class="icon">🎯</span> How We Use Information</h2>
+            <p>Currently, since we do not collect data, there is no use of user information.</p>
+            <p>If data collection is added in the future, information may be used to:</p>
+            <ul>
+                <li>Improve app performance and user experience</li>
+                <li>Understand how features are used</li>
+                <li>Display relevant advertisements</li>
+                <li>Fix bugs and technical issues</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>We do not sell or share personal information with third parties.</strong></p>
+            </div>
+        </div>
 
-  <h3>1.2 In-App Purchases</h3>
-  <p>
-    The App includes optional in-app purchases. All transactions are processed
-    securely through the <strong>Apple App Store</strong>.  
-    We do not receive or store any payment or billing information.
-  </p>
+        <div class="section">
+            <h2><span class="icon">👶</span> Children's Privacy</h2>
+            <p>The App is suitable for general audiences and does not knowingly collect personal information from children under 13. If we learn that a child has submitted personal information, we will delete it immediately.</p>
+            <p>Parents and guardians who have concerns about their child's use of the App should contact us through our support page.</p>
+        </div>
 
-  <hr />
+        <div class="section">
+            <h2><span class="icon">🔧</span> Third-Party Services</h2>
+            <p>Currently, the App uses only <strong>Apple's in-app purchase system</strong>.</p>
+            <p>Future versions may use:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> For serving advertisements (<a href="https://policies.google.com/privacy" class="contact-link" target="_blank">Privacy Policy</a>)</li>
+                <li><strong>Google Analytics for Firebase:</strong> For analytics and app performance monitoring (<a href="https://firebase.google.com/support/privacy" class="contact-link" target="_blank">Privacy Policy</a>)</li>
+            </ul>
+            <p>Their respective privacy policies will apply when integrated. We will update this policy and notify users before any third-party services are added.</p>
+        </div>
 
-  <h2>2. Future Data Collection (Ads & Analytics)</h2>
-  <p>
-    In future updates, we may integrate advertising or analytics services such as:
-  </p>
-  <ul>
-    <li><strong>AdMob (Google LLC)</strong> for displaying ads</li>
-    <li>Analytics platforms to help improve App performance</li>
-  </ul>
+        <div class="section">
+            <h2><span class="icon">🔐</span> Data Security</h2>
+            <p>Because we do not collect personal data at this time, we do not store any user information on our servers. Your game progress and settings are stored locally on your device.</p>
+            <p>If third-party SDKs are added later, they will handle data according to industry-standard security practices. We are committed to protecting any data that may be collected in the future.</p>
+        </div>
 
-  <p>
-    If these features are added, non-personal device information or usage data
-    may be collected automatically by the third-party SDKs.  
-    Any such collection will be disclosed in an updated Privacy Policy before it becomes active.
-  </p>
+        <div class="section">
+            <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. The "Last Updated" date at the top will reflect the most recent changes.</p>
+            <p>Significant changes may be communicated within the App or in update notes. We encourage you to review this policy periodically to stay informed about how we protect your privacy.</p>
+        </div>
 
-  <hr />
+        <div class="section">
+            <h2><span class="icon">📧</span> Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle data, please contact us:</p>
+            <div class="highlight-box">
+                <p><strong>Support Page:</strong> <a href="https://ai-grandfather.github.io/support.html" class="contact-link" target="_blank">https://ai-grandfather.github.io/support.html</a></p>
+                <p style="margin-top: 10px;"><strong>Email:</strong> <a href="mailto:atharmushaq9@gmail.com" class="contact-link">atharmushaq9@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
 
-  <h2>3. How We Use Information</h2>
-  <p>
-    If data collection is added in the future, information may be used to:
-  </p>
-  <ul>
-    <li>Serve advertisements</li>
-    <li>Monitor App performance</li>
-    <li>Fix bugs and improve gameplay</li>
-    <li>Enhance user experience</li>
-  </ul>
-  <p>
-    We do not sell or share personal information with third parties.
-  </p>
-
-  <hr />
-
-  <h2>4. Children’s Privacy</h2>
-  <p>
-    The App is suitable for general audiences and does not knowingly collect
-    personal information from children under 13.  
-    If we learn that a child has submitted personal information, we will delete it immediately.
-  </p>
-
-  <hr />
-
-  <h2>5. Third-Party Services</h2>
-  <p>Currently, the App uses only Apple’s in-app purchase system.</p>
-  <p>Future versions may use:</p>
-  <ul>
-    <li>AdMob</li>
-    <li>Firebase Analytics</li>
-    <li>Other advertising or analytics tools</li>
-  </ul>
-  <p>
-    Their respective privacy policies will apply when integrated.
-  </p>
-
-  <hr />
-
-  <h2>6. Data Storage and Security</h2>
-  <p>
-    Because we do not collect personal data at this time, we do not store any user information on our servers.  
-    If third-party SDKs are added later, they will handle data according to industry-standard security practices.
-  </p>
-
-  <hr />
-
-  <h2>7. Changes to This Privacy Policy</h2>
-  <p>
-    We may update this Privacy Policy from time to time.  
-    The “Last Updated” date will reflect the most recent changes.  
-    Significant changes may be communicated within the App or in update notes.
-  </p>
-
-  <hr />
-
-  <h2>8. Contact Us</h2>
-  <p>
-    If you have any questions about this Privacy Policy, please contact us through our support page:<br><br>
-    <a href="https://ai-grandfather.github.io/support.html">
-      https://ai-grandfather.github.io/support.html
-    </a>
-  </p>
+    <div class="footer">
+        <p>🧩 Block Scramble</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 MIAN MUHAMMAD ATHAR. All rights reserved.</p>
+    </div>
+</div>
+```
 
 </body>
 </html>
