@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>AI Grandfather - Indie iOS Developer</title>
-  <meta name="description" content="Creator of Block Scramble! — a fun and addictive puzzle game on the App Store">
+  <meta name="description" content="Creator of Block Scramble! — Turning AI curiosity into addictive puzzles">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { 
       margin: 0; 
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
       color: white; 
       min-height: 100vh;
       display: flex;
@@ -20,46 +20,77 @@
     }
     .container {
       max-width: 600px;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
       border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.1);
       padding: 50px 30px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
     }
+    .container:hover { transform: translateY(-5px); }
     h1 { 
       font-size: 3em; 
       margin: 0 0 10px 0;
       font-weight: 800;
+      background: linear-gradient(45deg, #00d4ff, #5a67d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     p { 
       font-size: 1.3em; 
       opacity: 0.9; 
       line-height: 1.6;
+      margin: 20px 0;
     }
     .app-icon {
       width: 140px;
       height: 140px;
       border-radius: 28px;
-      border: 5px solid rgba(255,255,255,0.3);
+      border: 3px solid rgba(255,255,255,0.2);
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       margin: 30px auto;
       display: block;
+      transition: transform 0.3s ease;
     }
+    .app-icon:hover { transform: scale(1.05); }
     .app-store-badge {
       margin-top: 30px;
       display: inline-block;
-      background: white;
-      color: #000;
-      padding: 12px 24px;
-      border-radius: 12px;
+      background: linear-gradient(45deg, #000, #333);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
     }
-    .app-store-badge:hover { transform: scale(1.05); }
-    footer { margin-top: 50px; font-size: 0.9em; opacity: 0.8; }
-    a { color: white; text-decoration: underline; }
+    .app-store-badge:hover { 
+      transform: scale(1.05); 
+      background: linear-gradient(45deg, #007aff, #0056cc);
+      box-shadow: 0 15px 35px rgba(0,122,255,0.4);
+    }
+    .about {
+      margin: 40px 0;
+      padding: 20px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      font-style: italic;
+    }
+    footer { 
+      margin-top: 50px; 
+      font-size: 0.9em; 
+      opacity: 0.7; 
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    a { color: #00d4ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .container { padding: 30px 20px; }
+      h1 { font-size: 2.5em; }
+    }
   </style>
 </head>
 <body>
@@ -67,7 +98,7 @@
     <h1>AI Grandfather</h1>
     <p>Indie iOS Developer</p>
 
-    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/5d/6f/8e5d6f3f-1a2b-9c0d-4e8f-9d8e7f2a1c9b/source/512x512bb.jpg" 
+    <img src="app-icon.png" 
          alt="Block Scramble! App Icon" 
          class="app-icon">
 
@@ -76,9 +107,14 @@
 
     <a href="https://apps.apple.com/us/app/block-scramble/id6755646573" 
        class="app-store-badge" 
-       target="_blank">
+       target="_blank" 
+       rel="noopener noreferrer">
       Download on the App Store
     </a>
+
+    <div class="about">
+      <p>Turning AI curiosity into addictive puzzles. Made with ❤️ in [Your Location].</p>
+    </div>
 
     <footer>
       <p>
