@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,188 +11,185 @@
             box-sizing: border-box;
         }
 
-```
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-        min-height: 100vh;
-        padding: 20px;
-        color: #333;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        animation: fadeIn 0.6s ease-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 50px 30px;
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 2.8em;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .header .subtitle {
-        font-size: 1.1em;
-        opacity: 0.95;
-        margin-top: 10px;
-    }
-
-    .last-updated {
-        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-        padding: 15px 30px;
-        text-align: center;
-        font-weight: bold;
-        color: #d63031;
-        font-size: 1.05em;
-    }
-
-    .content {
-        padding: 40px 30px;
-    }
-
-    .section {
-        margin-bottom: 35px;
-        padding: 25px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        border-radius: 15px;
-        border-left: 5px solid #667eea;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .section:hover {
-        transform: translateX(5px);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .section h2 {
-        color: #667eea;
-        font-size: 1.8em;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .icon {
-        font-size: 1.2em;
-    }
-
-    .section p, .section li {
-        line-height: 1.8;
-        color: #555;
-        font-size: 1.05em;
-        margin-bottom: 12px;
-    }
-
-    .section p:last-child {
-        margin-bottom: 0;
-    }
-
-    .highlight-box {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 15px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .highlight-box strong {
-        color: #764ba2;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    ul li {
-        padding: 10px 15px;
-        margin-bottom: 8px;
-        background: white;
-        border-radius: 8px;
-        border-left: 4px solid #f093fb;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    ul li:before {
-        content: "• ";
-        color: #667eea;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-
-    .contact-link {
-        color: #667eea;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    .contact-link:hover {
-        color: #764ba2;
-        text-decoration: underline;
-    }
-
-    .footer {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .footer p {
-        font-size: 1em;
-        opacity: 0.9;
-    }
-
-    @media (max-width: 600px) {
-        .header h1 {
-            font-size: 2em;
-        }
-        
-        .content {
-            padding: 30px 20px;
-        }
-        
-        .section {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
             padding: 20px;
+            color: #333;
         }
-    }
-</style>
-```
 
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .last-updated {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 15px 30px;
+            text-align: center;
+            font-weight: bold;
+            color: #d63031;
+            font-size: 1.05em;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .section p,
+        .section li {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.05em;
+            margin-bottom: 12px;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-box strong {
+            color: #764ba2;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #f093fb;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li:before {
+            content: "• ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .contact-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🔒 Privacy Policy</h1>
-            <p class="subtitle">Block Scramble</p>
-        </div>
+<div class="container">
+    <div class="header">
+        <h1>🔒 Privacy Policy</h1>
+        <p class="subtitle">Block Scramble</p>
+    </div>
 
-```
     <div class="last-updated">
         Last Updated: December 2025
     </div>
@@ -203,71 +199,100 @@
             <h2><span class="icon">📋</span> Overview</h2>
             <p>This Privacy Policy explains how our mobile game ("the App") handles user data. The App is developed and published by <strong>MIAN MUHAMMAD ATHAR</strong> ("we", "us", "our"). By using the App, you agree to the terms described in this policy.</p>
             <div class="highlight-box">
-                <p><strong>Important:</strong> Block Scramble is designed as an offline-first game. We prioritize your privacy and data security by minimizing data collection.</p>
+                <p><strong>Important:</strong> Block Scramble is designed as an offline-first game. Most gameplay happens entirely on your device. However, the App now includes advertisements and in-app purchases that rely on trusted third-party services, which may collect certain device and usage data.</p>
             </div>
         </div>
 
         <div class="section">
-            <h2><span class="icon">🛍️</span> In-App Purchases</h2>
-            <p>The App includes optional in-app purchases. All transactions are processed securely through the <strong>Apple App Store</strong>.</p>
+            <h2><span class="icon">🛍️</span> In-App Purchases & Subscriptions</h2>
+            <p>The App includes optional in-app purchases and subscriptions (for example, premium / ad-free access and in-game items). All transactions are processed securely through the <strong>Apple App Store</strong>.</p>
             <div class="highlight-box">
                 <p><strong>We do not receive or store any payment or billing information.</strong> All payment processing is handled entirely by Apple, following their security standards and privacy policies.</p>
             </div>
         </div>
 
         <div class="section">
-            <h2><span class="icon">📊</span> Data Collection</h2>
-            <p>As of the current version of the App, <strong>we do not collect, store, or transmit any personal data</strong>.</p>
-            <p>In future updates, we may integrate advertising or analytics services such as:</p>
+            <h2><span class="icon">📊</span> Data We Collect</h2>
+            <p>We aim to collect as little data as possible. The App itself does not require you to create an account or enter your name, email address, or other contact details.</p>
+            <p>However, when you use the App, certain data may be collected automatically by us and our service providers (especially for advertising, analytics, and crash reporting). This may include:</p>
             <ul>
-                <li>Google AdMob (for advertisements)</li>
-                <li>Google Analytics for Firebase (for usage analytics)</li>
-            </ul>
-            <p>If these features are added, non-personal device information or usage data may be collected automatically by the third-party SDKs. Any such collection will be disclosed in an updated Privacy Policy before it becomes active.</p>
-        </div>
-
-        <div class="section">
-            <h2><span class="icon">🎯</span> How We Use Information</h2>
-            <p>Currently, since we do not collect data, there is no use of user information.</p>
-            <p>If data collection is added in the future, information may be used to:</p>
-            <ul>
-                <li>Improve app performance and user experience</li>
-                <li>Understand how features are used</li>
-                <li>Display relevant advertisements</li>
-                <li>Fix bugs and technical issues</li>
+                <li><strong>Device identifiers</strong> such as the Advertising ID / IDFA, and other device identifiers used for advertising, security, and fraud prevention.</li>
+                <li><strong>Ad-related information</strong> such as which ads are shown, whether an ad is viewed or clicked, and basic information about ad performance.</li>
+                <li><strong>Approximate location information</strong> (for example, country or region) that can be inferred from your IP address to help show relevant ads and comply with regional regulations.</li>
+                <li><strong>Usage information</strong> such as app launches, time spent in the game, and interactions with certain screens or features, mainly to keep the game stable and to understand overall performance.</li>
             </ul>
             <div class="highlight-box">
-                <p><strong>We do not sell or share personal information with third parties.</strong></p>
+                <p><strong>We do not use this information to personally identify you.</strong> Data is used in aggregated or pseudonymous form wherever possible.</p>
             </div>
         </div>
 
         <div class="section">
+            <h2><span class="icon">🎯</span> Advertising, Personalization & Consent</h2>
+            <p>The App uses <strong>Google AdMob</strong> and Google’s <strong>User Messaging Platform (UMP)</strong> to show ads and to manage consent for personalized advertising where required by law.</p>
+            <div class="highlight-box">
+                <p><strong>Consent screen:</strong> On first launch (and occasionally afterwards if required), you may see a privacy / consent message asking whether you agree to personalized ads. Your choice is stored and can be changed later using your device or system privacy settings.</p>
+            </div>
+            <p>Depending on your choice:</p>
+            <ul>
+                <li><strong>If you consent to personalized ads:</strong> AdMob may use your device identifiers, approximate location, and app usage information to show ads that are more relevant to your interests.</li>
+                <li><strong>If you do not consent or close the consent dialog:</strong> you will receive <strong>non-personalized ads</strong>. These ads may still be based on general information such as the content of the game or your coarse location (for example, country), but are not tailored using your personal profile.</li>
+            </ul>
+            <p>Even when you choose non-personalized ads, AdMob may still process certain data (such as device identifiers and basic ad-serving information) for purposes such as fraud prevention, reporting, and frequency capping.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📱</span> IDFA & App Tracking Transparency</h2>
+            <p>On iOS, the App may request permission to use the device’s advertising identifier (IDFA) through Apple’s App Tracking Transparency (ATT) framework.</p>
+            <ul>
+                <li>If you allow tracking, AdMob may use the IDFA to help deliver and measure personalized ads.</li>
+                <li>If you decline, the App will use non-personalized ads and will respect your choice.</li>
+            </ul>
+            <p>You can change your tracking and advertising preferences at any time in your device’s system privacy settings.</p>
+        </div>
+
+        <div class="section">
             <h2><span class="icon">👶</span> Children's Privacy</h2>
-            <p>The App is suitable for general audiences and does not knowingly collect personal information from children under 13. If we learn that a child has submitted personal information, we will delete it immediately.</p>
-            <p>Parents and guardians who have concerns about their child's use of the App should contact us through our support page.</p>
+            <p>The App is intended for a general audience and is not specifically directed at children under 13. We do not knowingly request or collect personal information from children under 13.</p>
+            <p>If you are a parent or guardian and believe your child has provided personal information through the App, please contact us so we can take appropriate action.</p>
         </div>
 
         <div class="section">
             <h2><span class="icon">🔧</span> Third-Party Services</h2>
-            <p>Currently, the App uses only <strong>Apple's in-app purchase system</strong>.</p>
-            <p>Future versions may use:</p>
+            <p>The App may rely on the following third-party services:</p>
             <ul>
-                <li><strong>Google AdMob:</strong> For serving advertisements (<a href="https://policies.google.com/privacy" class="contact-link" target="_blank">Privacy Policy</a>)</li>
-                <li><strong>Google Analytics for Firebase:</strong> For analytics and app performance monitoring (<a href="https://firebase.google.com/support/privacy" class="contact-link" target="_blank">Privacy Policy</a>)</li>
+                <li><strong>Google AdMob & User Messaging Platform (UMP)</strong> – to display ads, manage consent, and determine whether ads are personalized or non-personalized.  
+                    See Google’s privacy information here: 
+                    <a href="https://policies.google.com/privacy" class="contact-link" target="_blank">https://policies.google.com/privacy</a>
+                </li>
+                <li><strong>Apple In-App Purchases</strong> – to handle payments and subscriptions in a secure way.  
+                    Apple’s privacy information is available here: 
+                    <a href="https://www.apple.com/legal/privacy/" class="contact-link" target="_blank">https://www.apple.com/legal/privacy/</a>
+                </li>
             </ul>
-            <p>Their respective privacy policies will apply when integrated. We will update this policy and notify users before any third-party services are added.</p>
+            <p>These providers may collect and process data as described in their own privacy policies. We encourage you to review those policies for more detail.</p>
         </div>
 
         <div class="section">
             <h2><span class="icon">🔐</span> Data Security</h2>
-            <p>Because we do not collect personal data at this time, we do not store any user information on our servers. Your game progress and settings are stored locally on your device.</p>
-            <p>If third-party SDKs are added later, they will handle data according to industry-standard security practices. We are committed to protecting any data that may be collected in the future.</p>
+            <p>We do not operate our own servers for storing your personal information. Game progress and local settings are primarily stored on your device or in Apple’s services (for example, iCloud, if enabled).</p>
+            <p>Our third-party partners (such as Google and Apple) use industry-standard security measures to protect the data they process. While no method of transmission or storage is completely secure, we work only with providers that have strong security and compliance practices.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">⚙️</span> Your Choices & Controls</h2>
+            <p>Depending on your region and device, you may have the following options:</p>
+            <ul>
+                <li>Respond to the in-app consent dialog to choose between personalized and non-personalized ads.</li>
+                <li>Change your device privacy or tracking settings at any time (for example, to reset or limit ad tracking).</li>
+                <li>Disable personalized ads from Google in your Google account settings, where available.</li>
+            </ul>
+            <p>If you have questions about how your choices affect ads in the game, you can contact us using the details below.</p>
         </div>
 
         <div class="section">
             <h2><span class="icon">🔄</span> Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. The "Last Updated" date at the top will reflect the most recent changes.</p>
-            <p>Significant changes may be communicated within the App or in update notes. We encourage you to review this policy periodically to stay informed about how we protect your privacy.</p>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, the App’s features, or legal requirements. The "Last Updated" date at the top will always show the most recent version.</p>
+            <p>Significant changes may be communicated within the App, on our website, or in the App Store update notes. We encourage you to review this policy periodically.</p>
         </div>
 
         <div class="section">
@@ -285,7 +310,5 @@
         <p style="margin-top: 10px; font-size: 0.9em;">© 2025 MIAN MUHAMMAD ATHAR. All rights reserved.</p>
     </div>
 </div>
-```
-
 </body>
 </html>
