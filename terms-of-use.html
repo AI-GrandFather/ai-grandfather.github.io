@@ -5,158 +5,337 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Use – Block Scramble</title>
   <meta name="description" content="Terms of Use for Block Scramble by AI Grandfather." />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --bg3: #7c3aed;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --heading: #111827;
+      --accent: #7c3aed;
+      --accent-2: #2563eb;
+      --soft: #f8fafc;
+      --border: #e5e7eb;
+      --shadow: 0 20px 60px rgba(0,0,0,0.22);
+      --radius: 22px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 45%, var(--bg3) 100%);
+      min-height: 100vh;
+      padding: 24px;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      animation: fadeIn .45s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #312e81 0%, #5b21b6 55%, #2563eb 100%);
+      color: white;
+      padding: 48px 32px 36px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .brand-text p {
+      opacity: 0.92;
+      font-size: 0.98rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 760px;
+      line-height: 1.7;
+      opacity: 0.96;
+    }
+
+    .updated {
+      background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%);
+      color: #312e81;
+      text-align: center;
+      padding: 14px 20px;
+      font-weight: 700;
+      border-bottom: 1px solid #ddd6fe;
+    }
+
+    .content {
+      padding: 34px 28px 36px;
+      background: #ffffff;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 24px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+      border: 1px solid #e5e7eb;
+      border-left: 5px solid var(--accent);
+      border-radius: 18px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.10);
+    }
+
+    .section h3 {
+      color: var(--heading);
+      font-size: 1.32rem;
+      margin-bottom: 14px;
+    }
+
+    .section p,
+    .section li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .section p + p { margin-top: 10px; }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .callout {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 14px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.07);
+    }
+
+    .callout strong {
+      color: #312e81;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .footer {
+      background: linear-gradient(135deg, #312e81 0%, #5b21b6 100%);
+      color: white;
+      text-align: center;
+      padding: 28px 24px;
+    }
+
+    .footer p {
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 14px; }
+      .hero { padding: 32px 20px 26px; }
+      .content { padding: 22px 18px 26px; }
+      .section { padding: 18px; }
+      .hero h2 { font-size: 2rem; }
+      .brand img { width: 56px; height: 56px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <div class="brand">
-        <img src="app-icon.png" alt="Block Scramble App Icon" />
-        <div class="brand-text">
-          <h1>Block Scramble</h1>
-          <p>Official Terms of Use</p>
-        </div>
-      </div>
-
-      <nav class="nav-links">
-        <a href="./">Home</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="data-deletion.html">Data Deletion</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <span class="eyebrow">Legal</span>
-          <h2>Terms of Use</h2>
-          <p>
-            These Terms of Use govern your access to and use of the Block Scramble mobile game,
-            website, and related services provided by AI Grandfather.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="container">
-        <article class="section-card">
-          <p class="small"><strong>Last Updated:</strong> April 20, 2026</p>
-
-          <h3>1. Acceptance of Terms</h3>
-          <p>
-            By downloading, accessing, or using Block Scramble, you agree to be bound by these Terms of Use.
-            If you do not agree with any part of these Terms, please do not use the game or related services.
-          </p>
-
-          <h3>2. About Block Scramble</h3>
-          <p>
-            Block Scramble is a mobile puzzle game made available through the Apple App Store.
-            The game is intended for lawful entertainment use only.
-          </p>
-
-          <h3>3. Eligibility and User Conduct</h3>
-          <p>You agree that you will not:</p>
-          <ul>
-            <li>Use the game for unlawful, abusive, or fraudulent purposes.</li>
-            <li>Attempt to reverse engineer, interfere with, or disrupt the app or its services.</li>
-            <li>Exploit bugs, cheats, automation, or unauthorized tools in a way that harms the experience.</li>
-            <li>Use the app in a way that violates any applicable law or platform rule.</li>
-          </ul>
-
-          <h3>4. Accounts and Third-Party Login</h3>
-          <p>
-            Some features may involve sign-in or platform integrations now or in the future, including Apple
-            or Meta/Facebook related services. If such features are used, you are responsible for activity
-            associated with your account and for maintaining the security of your login credentials.
-          </p>
-
-          <h3>5. In-App Purchases</h3>
-          <p>
-            Block Scramble may offer optional in-app purchases. All purchases are processed by Apple through
-            the App Store, subject to Apple’s own terms, billing policies, and refund rules.
-          </p>
-          <p>
-            We do not directly process or store your payment card information.
-          </p>
-
-          <h3>6. Intellectual Property</h3>
-          <p>
-            All content in Block Scramble, including but not limited to game design, branding, interface elements,
-            graphics, code, logos, text, and original assets, is owned by AI Grandfather or used with permission
-            and is protected by applicable intellectual property laws.
-          </p>
-          <p>
-            You may not copy, reproduce, distribute, modify, or commercially exploit any part of the app except
-            as expressly permitted by law.
-          </p>
-
-          <h3>7. Privacy</h3>
-          <p>
-            Your use of the app is also governed by our Privacy Policy.
-            Please review it here:
-          </p>
-          <p><a href="privacy-policy.html">Privacy Policy</a></p>
-
-          <h3>8. Updates and Changes</h3>
-          <p>
-            We may update, modify, suspend, or discontinue any feature of Block Scramble at any time,
-            with or without notice. We may also revise these Terms of Use from time to time.
-          </p>
-          <p>
-            Continued use of the app after updated Terms are posted means you accept the revised Terms.
-          </p>
-
-          <h3>9. Disclaimer of Warranties</h3>
-          <p>
-            Block Scramble is provided on an “as is” and “as available” basis. To the fullest extent permitted
-            by law, we make no warranties, express or implied, regarding availability, uninterrupted use,
-            performance, accuracy, or fitness for a particular purpose.
-          </p>
-
-          <h3>10. Limitation of Liability</h3>
-          <p>
-            To the fullest extent permitted by law, AI Grandfather shall not be liable for any indirect,
-            incidental, special, consequential, or punitive damages arising out of or related to your use of,
-            or inability to use, Block Scramble.
-          </p>
-
-          <h3>11. Termination</h3>
-          <p>
-            We may restrict or terminate access to the app or related services if we reasonably believe
-            you have violated these Terms or applicable laws.
-          </p>
-
-          <h3>12. Governing Law</h3>
-          <p>
-            These Terms shall be governed by and interpreted in accordance with applicable laws,
-            without regard to conflict of law principles, unless otherwise required by mandatory local law.
-          </p>
-
-          <h3>13. Contact</h3>
-          <div class="success-box">
-            <p>
-              For legal or support questions regarding these Terms, contact:
-            </p>
-            <p>
-              <strong>AI Grandfather / Block Scramble</strong><br />
-              Email: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a><br />
-              Website: <a href="https://ai-grandfather.github.io/">ai-grandfather.github.io</a>
-            </p>
+  <div class="container">
+    <header class="hero">
+      <div class="topbar">
+        <div class="brand">
+          <img src="app-icon.png" alt="Block Scramble app icon">
+          <div class="brand-text">
+            <h1>Block Scramble</h1>
+            <p>Official Terms of Use</p>
           </div>
-        </article>
-      </div>
-    </section>
-  </main>
+        </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-card">
-        © 2026 Block Scramble. All rights reserved.
+        <nav class="nav">
+          <a href="./">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="data-deletion.html">Data Deletion</a>
+        </nav>
       </div>
+
+      <h2>Terms of Use</h2>
+      <p>
+        These Terms of Use govern your access to and use of the Block Scramble mobile game,
+        website, and related services provided by AI Grandfather.
+      </p>
+    </header>
+
+    <div class="updated">
+      Last Updated: April 20, 2026
     </div>
-  </footer>
+
+    <main class="content">
+      <section class="section">
+        <h3>1. Acceptance of Terms</h3>
+        <p>
+          By downloading, accessing, or using Block Scramble, you agree to be bound by these Terms of Use.
+          If you do not agree, please do not use the app.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>2. Use of the App</h3>
+        <p>Block Scramble is provided for personal, lawful entertainment use only. You agree not to:</p>
+        <ul>
+          <li>Use the app for unlawful, abusive, or fraudulent purposes.</li>
+          <li>Attempt to interfere with, reverse engineer, disrupt, or exploit the app.</li>
+          <li>Use cheats, bots, automation, or unauthorized modifications.</li>
+          <li>Misuse any login, leaderboard, premium, or account-linked feature.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>3. Accounts and Login Services</h3>
+        <p>
+          Some features may now or in the future allow sign-in through Apple, Facebook, or other supported services.
+          If you use such features, you are responsible for activity associated with your account and for keeping
+          your login credentials secure.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>4. In-App Purchases</h3>
+        <p>
+          The app may offer optional in-app purchases or premium features. Payments are processed by Apple through
+          the App Store and are subject to Apple's own billing, refund, and subscription rules.
+        </p>
+        <div class="callout">
+          <strong>Important:</strong> We do not directly process or store your payment card information.
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>5. Intellectual Property</h3>
+        <p>
+          All game content, branding, code, graphics, user interface elements, sounds, logos, and related materials
+          are owned by AI Grandfather / Block Scramble or used with permission and are protected by applicable laws.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>6. Privacy</h3>
+        <p>
+          Your use of Block Scramble is also governed by our
+          <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>7. Service Changes</h3>
+        <p>
+          We may update, improve, modify, suspend, or discontinue any feature of the app at any time.
+          We may also revise these Terms when needed to reflect product or legal changes.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>8. Disclaimer</h3>
+        <p>
+          Block Scramble is provided on an “as is” and “as available” basis. To the maximum extent permitted by law,
+          we make no warranties regarding availability, uninterrupted use, accuracy, or fitness for a particular purpose.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>9. Limitation of Liability</h3>
+        <p>
+          To the fullest extent permitted by law, AI Grandfather shall not be liable for any indirect, incidental,
+          special, or consequential damages arising from use of, or inability to use, the app.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>10. Contact</h3>
+        <div class="callout">
+          <p><strong>Block Scramble / AI Grandfather</strong></p>
+          <p>Email: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a></p>
+          <p>Website: <a href="https://ai-grandfather.github.io/">https://ai-grandfather.github.io/</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Block Scramble</p>
+      <p>© 2026 AI Grandfather. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
