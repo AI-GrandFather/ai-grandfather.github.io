@@ -5,128 +5,324 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>User Data Deletion – Block Scramble</title>
   <meta name="description" content="User data deletion instructions for Block Scramble." />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --bg3: #2563eb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --heading: #111827;
+      --accent: #2563eb;
+      --accent-2: #7c3aed;
+      --good: #059669;
+      --soft: #f8fafc;
+      --border: #e5e7eb;
+      --shadow: 0 20px 60px rgba(0,0,0,0.22);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 45%, var(--bg3) 100%);
+      min-height: 100vh;
+      padding: 24px;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      animation: fadeIn .45s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #7c3aed 100%);
+      color: white;
+      padding: 48px 32px 36px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .brand-text p {
+      opacity: 0.92;
+      font-size: 0.98rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 0.95rem;
+    }
+
+    .hero h2 {
+      font-size: 2.45rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 760px;
+      line-height: 1.7;
+      opacity: 0.96;
+    }
+
+    .updated {
+      background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 100%);
+      color: #1e3a8a;
+      text-align: center;
+      padding: 14px 20px;
+      font-weight: 700;
+      border-bottom: 1px solid #c7d2fe;
+    }
+
+    .content {
+      padding: 34px 28px 36px;
+      background: #ffffff;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 24px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+      border: 1px solid #e5e7eb;
+      border-left: 5px solid var(--accent);
+      border-radius: 18px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.10);
+    }
+
+    .section h3 {
+      color: var(--heading);
+      font-size: 1.32rem;
+      margin-bottom: 14px;
+    }
+
+    .section p,
+    .section li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .section p + p { margin-top: 10px; }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .callout {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 14px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.07);
+    }
+
+    .success {
+      border-left: 5px solid var(--good);
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .footer {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+      color: white;
+      text-align: center;
+      padding: 28px 24px;
+    }
+
+    .footer p {
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 14px; }
+      .hero { padding: 32px 20px 26px; }
+      .content { padding: 22px 18px 26px; }
+      .section { padding: 18px; }
+      .hero h2 { font-size: 2rem; }
+      .brand img { width: 56px; height: 56px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <div class="brand">
-        <img src="app-icon.png" alt="Block Scramble App Icon" />
-        <div class="brand-text">
-          <h1>Block Scramble</h1>
-          <p>User Data Deletion Instructions</p>
-        </div>
-      </div>
-
-      <nav class="nav-links">
-        <a href="./">Home</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-use.html">Terms of Use</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <span class="eyebrow">Privacy & Control</span>
-          <h2>User Data Deletion</h2>
-          <p>
-            This page explains how Block Scramble users can request deletion of account-related
-            or integration-related data, including data associated with Facebook Login if such integration is used.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="container">
-        <article class="section-card">
-          <p class="small"><strong>Last Updated:</strong> April 20, 2026</p>
-
-          <div class="notice">
-            <p>
-              Block Scramble is designed to minimize data collection. If you believe data associated with your
-              account or app usage should be deleted, you may request deletion using the instructions below.
-            </p>
+  <div class="container">
+    <header class="hero">
+      <div class="topbar">
+        <div class="brand">
+          <img src="app-icon.png" alt="Block Scramble app icon">
+          <div class="brand-text">
+            <h1>Block Scramble</h1>
+            <p>User Data Deletion Instructions</p>
           </div>
+        </div>
 
-          <h3>1. How to Request Data Deletion</h3>
-          <p>
-            To request deletion of your data, email us at:
-          </p>
-          <p>
-            <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a>
-          </p>
-          <p>
-            Please use the subject line:
-          </p>
-          <p class="code-url">Data Deletion Request – Block Scramble</p>
-
-          <h3>2. Information to Include</h3>
-          <p>Please include enough information for us to identify your request, such as:</p>
-          <ul>
-            <li>Your name or nickname used in the app, if applicable</li>
-            <li>Your email address associated with the request</li>
-            <li>Your Facebook account ID, if you used Facebook Login</li>
-            <li>A short description of the data you want deleted</li>
-          </ul>
-
-          <h3>3. What We Will Delete</h3>
-          <p>Where applicable and legally permissible, we will delete:</p>
-          <ul>
-            <li>App account-related information associated with your request</li>
-            <li>Connected login-related data we control</li>
-            <li>Support records tied to the request, where deletion is permitted</li>
-          </ul>
-
-          <h3>4. What May Be Retained</h3>
-          <p>
-            We may retain limited information where necessary to:
-          </p>
-          <ul>
-            <li>Comply with legal obligations</li>
-            <li>Resolve disputes</li>
-            <li>Enforce agreements</li>
-            <li>Maintain security, fraud prevention, or audit records</li>
-          </ul>
-
-          <h3>5. Processing Time</h3>
-          <p>
-            We aim to review and process valid deletion requests within
-            <strong>7 business days</strong>, although complex requests may take longer when legally necessary.
-          </p>
-
-          <h3>6. Facebook / Meta Users</h3>
-          <p>
-            If you used Facebook Login with Block Scramble, you may also remove the app from your Facebook
-            settings. Removing the app from Facebook disconnects future access, while emailing us allows you
-            to request deletion of data under our control.
-          </p>
-
-          <h3>7. Contact</h3>
-          <div class="success-box">
-            <p>
-              For deletion requests or privacy questions, contact:
-            </p>
-            <p>
-              <strong>AI Grandfather / Block Scramble</strong><br />
-              Email: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a><br />
-              Website: <a href="https://ai-grandfather.github.io/">ai-grandfather.github.io</a>
-            </p>
-          </div>
-        </article>
+        <nav class="nav">
+          <a href="./">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+        </nav>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-card">
-        © 2026 Block Scramble. All rights reserved.
-      </div>
+      <h2>User Data Deletion</h2>
+      <p>
+        This page explains how users of Block Scramble can request deletion of data associated with
+        Facebook Login or other account-linked services, where applicable.
+      </p>
+    </header>
+
+    <div class="updated">
+      Last Updated: April 20, 2026
     </div>
-  </footer>
+
+    <main class="content">
+      <section class="section success">
+        <h3>1. Overview</h3>
+        <p>
+          Block Scramble aims to minimize data collection. Most gameplay data is stored locally on your device.
+          If you use Facebook Login or other linked services, certain account-related data may be processed
+          to support authentication and related features.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>2. How to Request Deletion</h3>
+        <p>
+          To request deletion of data associated with your Block Scramble account or Facebook-linked profile,
+          email us at:
+        </p>
+        <div class="callout">
+          <p><strong>Email:</strong> <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a></p>
+          <p><strong>Subject Line:</strong> Data Deletion Request – Block Scramble</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>3. Information to Include</h3>
+        <p>Please include enough information for us to identify your request, such as:</p>
+        <ul>
+          <li>Your name or nickname used in the app, if available</li>
+          <li>Your email address associated with the request</li>
+          <li>Your Facebook account ID or profile email, if you used Facebook Login</li>
+          <li>A short note describing the data you want deleted</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>4. What We May Delete</h3>
+        <ul>
+          <li>Facebook Login related identifiers or profile links under our control</li>
+          <li>Support records tied to your request, where deletion is permitted</li>
+          <li>Any server-side account linkage data we maintain for login functionality</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>5. What May Be Retained</h3>
+        <p>We may retain limited information where legally necessary for:</p>
+        <ul>
+          <li>Security and fraud prevention</li>
+          <li>Legal compliance</li>
+          <li>Dispute resolution</li>
+          <li>Enforcement of agreements</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>6. Processing Time</h3>
+        <p>
+          We aim to review and process valid deletion requests within 7 business days,
+          though some requests may take longer if additional verification is required.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>7. Disconnecting from Facebook</h3>
+        <p>
+          If you used Facebook Login, you may also remove Block Scramble from your Facebook account settings.
+          Removing the app there disconnects future access, while contacting us allows you to request deletion
+          of data under our control.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>8. Contact</h3>
+        <div class="callout">
+          <p><strong>Block Scramble / AI Grandfather</strong></p>
+          <p>Email: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a></p>
+          <p>Website: <a href="https://ai-grandfather.github.io/">https://ai-grandfather.github.io/</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Block Scramble</p>
+      <p>© 2026 AI Grandfather. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
