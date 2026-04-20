@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crown E-Commerce (SMC-Private) Limited</title>
+  <meta name="description" content="Crown E-Commerce (SMC-Private) Limited – Mobile app and game development studio." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .header .subtitle {
+      font-size: 1.1em;
+      opacity: 0.95;
+      margin-top: 10px;
+    }
+
+    .header .tagline {
+      font-size: 1em;
+      opacity: 0.8;
+      margin-top: 8px;
+    }
+
+    .nav {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .badge-bar {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      padding: 15px 30px;
+      text-align: center;
+      font-weight: bold;
+      color: #d63031;
+      font-size: 1.05em;
+    }
+
+    .content {
+      padding: 40px 30px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+      padding: 25px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      border-left: 5px solid #667eea;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .section h2 {
+      color: #667eea;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section p,
+    .section li {
+      line-height: 1.8;
+      color: #555;
+      font-size: 1.05em;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .highlight-box strong {
+      color: #764ba2;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      background: white;
+      border-radius: 8px;
+      border-left: 4px solid #f093fb;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    ul li:before {
+      content: "• ";
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .app-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .app-icon {
+      font-size: 2.5em;
+      flex-shrink: 0;
+    }
+
+    .app-info h3 {
+      color: #667eea;
+      font-size: 1.2em;
+      margin-bottom: 4px;
+    }
+
+    .app-info p {
+      color: #777;
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    .app-badge {
+      margin-left: auto;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85em;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .contact-link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 1.9em; }
+      .content { padding: 30px 20px; }
+      .section { padding: 20px; }
+      .app-card { flex-wrap: wrap; }
+      .app-badge { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>👑 Crown E-Commerce</h1>
+    <p class="subtitle">(SMC-Private) Limited</p>
+    <p class="tagline">Mobile App & Game Development Studio · Incorporated in Pakistan</p>
+    <div class="nav">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="data-deletion.html">Data Deletion</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="badge-bar">
+    🏢 Registered with SECP · Corporate ID: 0200263 · Incorporated April 2022
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h2><span>🏢</span> About Us</h2>
+      <p>
+        Crown E-Commerce (SMC-Private) Limited is a registered Pakistani technology company focused on
+        developing mobile applications and games for iOS and Android platforms.
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>Legal Name:</strong> Crown E-Commerce (SMC-Private) Limited<br/>
+          <strong>Registration:</strong> Securities and Exchange Commission of Pakistan (SECP)<br/>
+          <strong>Corporate ID:</strong> 0200263<br/>
+          <strong>Incorporated:</strong> April 18, 2022 · Lahore, Pakistan
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span>📱</span> Our Apps & Games</h2>
+      <p>We build polished, user-friendly mobile experiences published on the Apple App Store.</p>
+
+      <div class="app-card">
+        <div class="app-icon">🧩</div>
+        <div class="app-info">
+          <h3>Block Scramble</h3>
+          <p>A challenging block puzzle game for iOS. Drag, place, and clear blocks to beat your high score.</p>
+        </div>
+        <div class="app-badge">App Store</div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon">🎮</div>
+        <div class="app-info">
+          <h3>More Coming Soon</h3>
+          <p>We are actively developing new games and apps. Stay tuned for upcoming releases.</p>
+        </div>
+        <div class="app-badge">In Development</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span>🔒</span> Privacy & Data</h2>
+      <p>
+        We take user privacy seriously. Our apps are designed with minimal data collection
+        and full transparency about how any data is used.
+      </p>
+      <ul>
+        <li>All privacy policies are publicly available for each app</li>
+        <li>We support user data deletion requests</li>
+        <li>We comply with Apple App Store guidelines and GDPR principles</li>
+        <li>We use Facebook Login only where users opt in</li>
+      </ul>
+      <div class="highlight-box">
+        <p>
+          <a href="privacy-policy.html" class="contact-link">📄 Block Scramble Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <h2><span>📧</span> Contact Us</h2>
+      <p>
+        For any questions about our apps, privacy practices, business inquiries, or support:
+      </p>
+      <div class="highlight-box">
+        <p><strong>Developer:</strong> Mian Muhammad Athar</p>
+        <p style="margin-top:10px;"><strong>Email:</strong>
+          <a href="mailto:atharmushtaq9@gmail.com" class="contact-link">atharmushtaq9@gmail.com</a>
+        </p>
+        <p style="margin-top:10px;"><strong>Website:</strong>
+          <a href="https://ai-grandfather.github.io/" class="contact-link" target="_blank" rel="noopener noreferrer">https://ai-grandfather.github.io/</a>
+        </p>
+        <p style="margin-top:10px;"><strong>Address:</strong> Besides Step School, Madhali Sharif, Sahiwal, Punjab 57000, Pakistan</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>👑 Crown E-Commerce (SMC-Private) Limited</p>
+    <p style="margin-top:10px; font-size:0.9em;">© 2026 Crown E-Commerce. All rights reserved. · SECP Corporate ID: 0200263</p>
+  </div>
+
+</div>
+</body>
+</html>
