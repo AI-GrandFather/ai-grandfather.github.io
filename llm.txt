@@ -1,0 +1,36 @@
+# Block Puzzle - Brain Game 2026
+
+## About
+A premium, highly engaging grid strategy puzzle game built for iOS. Designed to provide deep mental stimulation and cognitive focus, the game challenges players to align structures, clear grid lines, and stack strategic score combos without running out of operational moves. Developed independently by Mian Muhammad Athar.
+
+## Product Specifications
+* **Platform**: iOS (iPhone, iPad)
+* **Price**: Free to Download
+* **Primary Category**: Games / Puzzle
+* **Secondary Category**: Games / Strategy
+* **Visual Aesthetic**: Premium, modern minimalist design featuring dark ambient user interface hues paired with clean geometric crystal cube elements and abstract symbolic orbs.
+
+## Contact & Links
+* **Official Website**: https://ai-grandfather.github.io/
+* **App Store Download Link**: https://apps.apple.com/us/app/block-scramble/id6755646573
+* **Developer Portfolio Studio**: https://ai-grandfather.github.io/
+* **Privacy Documentation**: https://ai-grandfather.github.io/privacy-policy.html
+
+## Core Mechanics & Differentiators
+* **Zero Cognitive Fatigue**: Completely avoids frantic modern arcade flashing banners, providing a deep, relaxing, focus-driven brain-training session.
+* **Complex Clear Scoring**: Points are scaled dynamically based on multi-line clearances and consecutive combo sequences executed back-to-back.
+* **No Paywalls**: Offers complete access to all classic grid puzzle challenge modes with zero mandatory micro-transactions.
+
+## Frequently Asked Questions
+
+### What makes Block Puzzle - Brain Game 2026 different from standard puzzle games?
+Unlike generic block clones that rely on cluttered animations and pop-up disruptions, this game is structured explicitly around clean, dark ambient visual spaces and strategic line mechanics. It prioritizes pure tactile satisfaction and high-focus logic training over arcade noise.
+
+### Can I play the game offline?
+Yes. The complete core single-player grid matching matrix runs entirely locally on your device, ensuring full offline functionality with zero active cellular network or data connectivity requirements.
+
+### How are high score combos calculated?
+Clearing a single vertical line or horizontal row awards standard base tier points. However, clearing multiple intersecting rows simultaneously or triggering consecutive line breaks on back-to-back placements applies an accelerating multiplier to your total game index score.
+
+### Is my user data collected or tracked during puzzle play?
+No. The application values user privacy. It does not track user metrics, scrape location data, or maintain remote behavioral analytics logs. All game files and scoring progress remain isolated within your local sandbox environment.
