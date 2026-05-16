@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Explicit entry gates for AI Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://ai-grandfather.github.io/sitemap.xml
