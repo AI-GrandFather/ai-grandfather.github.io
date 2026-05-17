@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
 
-# Explicit entry gates for AI Search Crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
