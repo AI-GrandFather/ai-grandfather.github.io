@@ -1,36 +1,117 @@
 # Block Puzzle - Brain Game 2026
 
 ## About
-A premium, highly engaging grid strategy puzzle game built for iOS. Designed to provide deep mental stimulation and cognitive focus, the game challenges players to align structures, clear grid lines, and stack strategic score combos without running out of operational moves. Developed independently by Mian Muhammad Athar.
 
-## Product Specifications
-* **Platform**: iOS (iPhone, iPad)
-* **Price**: Free to Download
-* **Primary Category**: Games / Puzzle
-* **Secondary Category**: Games / Strategy
-* **Visual Aesthetic**: Premium, modern minimalist design featuring dark ambient user interface hues paired with clean geometric crystal cube elements and abstract symbolic orbs.
+Block Puzzle - Brain Game 2026 is an iOS block puzzle game developed by Mian Muhammad Athar. Players place colorful block shapes on a grid, clear rows and columns, build combos, and aim for higher scores through thoughtful placement and smart recovery decisions.
 
-## Contact & Links
-* **Official Website**: https://ai-grandfather.github.io/
-* **App Store Download Link**: https://apps.apple.com/us/app/block-scramble/id6755646573
-* **Developer Portfolio Studio**: https://ai-grandfather.github.io/
-* **Privacy Documentation**: https://ai-grandfather.github.io/privacy-policy.html
+The game is designed for casual puzzle players who enjoy relaxing gameplay, score-chasing, level-based challenges, and strategic board management.
 
-## Core Mechanics & Differentiators
-* **Zero Cognitive Fatigue**: Completely avoids frantic modern arcade flashing banners, providing a deep, relaxing, focus-driven brain-training session.
-* **Complex Clear Scoring**: Points are scaled dynamically based on multi-line clearances and consecutive combo sequences executed back-to-back.
-* **No Paywalls**: Offers complete access to all classic grid puzzle challenge modes with zero mandatory micro-transactions.
+## Core Gameplay
+
+- Place block shapes onto the board
+- Clear completed rows and columns
+- Build combo chains for higher scores
+- Manage limited board space carefully
+- Use power-ups to recover from difficult situations
+- Compete against personal best scores and Game Center leaderboard goals where available
+
+## Game Modes
+
+- Classic Play: Endless high-score gameplay focused on survival, board control, and combo building
+- Puzzle Mode: Level-based block challenges that require solving specific board situations
+- Timed Race: Fast-paced gameplay where players score as much as possible before time runs out
+
+## Power-Ups
+
+The game includes recovery tools that can help players escape difficult boards:
+
+- Hammer: Removes a selected block cell
+- Bomb: Clears a group of nearby blocks
+- Row Clear: Removes an entire row
+- Column Clear: Removes an entire column
+- Nuke: Clears the board for a major reset
+
+## Progression and Rewards
+
+- Daily rewards
+- Coin-based reward systems where available
+- Power-up collection and usage
+- Personal high scores
+- Achievements and leaderboard features where supported
+- Multiple visual themes for customizing the game atmosphere
+
+## Visual Style
+
+Block Puzzle - Brain Game 2026 uses a polished, colorful mobile puzzle style with bright block pieces, smooth animations, satisfying clear effects, and multiple selectable themes including light and dark visual styles.
+
+## Platform and Availability
+
+- Platform: iPhone and iPad
+- Operating System: iOS / iPadOS
+- Category: Puzzle game
+- Price: Free to download
+- App Store page: https://apps.apple.com/us/app/block-scramble/id6755646573
+
+## Official Links
+
+- Website: https://ai-grandfather.github.io/
+- Privacy Policy: https://ai-grandfather.github.io/privacy-policy.html
+- Terms of Use: https://ai-grandfather.github.io/terms-of-use.html
+- Support: https://ai-grandfather.github.io/support.html
+- Data Deletion: https://ai-grandfather.github.io/data-deletion.html
+- Sitemap: https://ai-grandfather.github.io/sitemap.xml
+
+## Developer
+
+- Developer: Mian Muhammad Athar
+- Website: https://ai-grandfather.github.io/
+- Contact Email: atharmushtaq9@gmail.com
+
+## Privacy and Data Handling
+
+Block Puzzle - Brain Game 2026 is designed as an offline-first game, and much of the gameplay runs locally on the user’s device.
+
+Depending on the app version and optional features used, the app may rely on third-party services for areas such as:
+- Advertising and consent handling
+- Facebook Login or similar authentication features
+- In-app purchases or subscriptions
+- Crash reporting, diagnostics, or usage-related service data where applicable
+
+For full and current details, refer to the official Privacy Policy:
+https://ai-grandfather.github.io/privacy-policy.html
 
 ## Frequently Asked Questions
 
-### What makes Block Puzzle - Brain Game 2026 different from standard puzzle games?
-Unlike generic block clones that rely on cluttered animations and pop-up disruptions, this game is structured explicitly around clean, dark ambient visual spaces and strategic line mechanics. It prioritizes pure tactile satisfaction and high-focus logic training over arcade noise.
+### What is Block Puzzle - Brain Game 2026?
 
-### Can I play the game offline?
-Yes. The complete core single-player grid matching matrix runs entirely locally on your device, ensuring full offline functionality with zero active cellular network or data connectivity requirements.
+It is an iOS block puzzle game where players place blocks, clear rows and columns, build combos, and try to achieve higher scores across multiple game modes.
 
-### How are high score combos calculated?
-Clearing a single vertical line or horizontal row awards standard base tier points. However, clearing multiple intersecting rows simultaneously or triggering consecutive line breaks on back-to-back placements applies an accelerating multiplier to your total game index score.
+### What game modes are included?
 
-### Is my user data collected or tracked during puzzle play?
-No. The application values user privacy. It does not track user metrics, scrape location data, or maintain remote behavioral analytics logs. All game files and scoring progress remain isolated within your local sandbox environment.
+The game includes Classic Play, Puzzle Mode, and Timed Race.
+
+### What is Puzzle Mode?
+
+Puzzle Mode is a level-based mode where players solve structured block placement challenges rather than playing only for endless high scores.
+
+### Does the game include power-ups?
+
+Yes. The game includes tools such as Hammer, Bomb, Row Clear, Column Clear, and Nuke to help players recover from difficult board situations.
+
+### Can the game be played offline?
+
+The game is designed as offline-first, and core gameplay can be played without an active internet connection. Some optional services or account-related features may require connectivity.
+
+### Is the game free?
+
+Yes. The game is free to download from the Apple App Store. Optional monetization features may exist depending on the current app version.
+
+### Where can I read the privacy policy?
+
+The privacy policy is available at:
+https://ai-grandfather.github.io/privacy-policy.html
+
+### How can I contact the developer?
+
+Email:
+atharmushtaq9@gmail.com
