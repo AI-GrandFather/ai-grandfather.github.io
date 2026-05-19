@@ -1,8 +1,8 @@
-# Block Puzzle - Brain Game 2026
+# Block Crush - Puzzle Games New
 
 ## About
 
-Block Puzzle - Brain Game 2026 is an iOS block puzzle game developed by Mian Muhammad Athar. Players place colorful block shapes on a grid, clear rows and columns, build combos, and aim for higher scores through thoughtful placement and smart recovery decisions.
+Block Crush - Puzzle Games New is an iOS block puzzle game developed by Mian Muhammad Athar. Players place colorful block shapes on a grid, clear rows and columns, build combos, and aim for higher scores through thoughtful placement and smart recovery decisions.
 
 The game is designed for casual puzzle players who enjoy relaxing gameplay, score-chasing, level-based challenges, and strategic board management.
 
@@ -42,7 +42,7 @@ The game includes recovery tools that can help players escape difficult boards:
 
 ## Visual Style
 
-Block Puzzle - Brain Game 2026 uses a polished, colorful mobile puzzle style with bright block pieces, smooth animations, satisfying clear effects, and multiple selectable themes including light and dark visual styles.
+Block Crush - Puzzle Games New uses a polished, colorful mobile puzzle style with bright block pieces, smooth animations, satisfying clear effects, and multiple selectable themes including light and dark visual styles.
 
 ## Platform and Availability
 
@@ -69,7 +69,7 @@ Block Puzzle - Brain Game 2026 uses a polished, colorful mobile puzzle style wit
 
 ## Privacy and Data Handling
 
-Block Puzzle - Brain Game 2026 is designed as an offline-first game, and much of the gameplay runs locally on the user’s device.
+Block Crush - Puzzle Games New is designed as an offline-first game, and much of the gameplay runs locally on the user’s device.
 
 Depending on the app version and optional features used, the app may rely on third-party services for areas such as:
 - Advertising and consent handling
@@ -82,7 +82,7 @@ https://ai-grandfather.github.io/privacy-policy.html
 
 ## Frequently Asked Questions
 
-### What is Block Puzzle - Brain Game 2026?
+### What is Block Crush - Puzzle Games New?
 
 It is an iOS block puzzle game where players place blocks, clear rows and columns, build combos, and try to achieve higher scores across multiple game modes.
 
