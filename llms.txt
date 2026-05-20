@@ -115,3 +115,22 @@ https://ai-grandfather.github.io/privacy-policy.html
 
 Email:
 atharmushtaq9@gmail.com
+
+## FurrFind: AI Breed Identifier
+
+### About
+A high-accuracy utility application for iOS platforms built to perform computer vision breed matching analysis for domestic animals. Users can instantly photograph dogs or cats to parse precise historical lineage maps, trait indicators, and ancestral breed breakdowns. Developed by Mian Muhammad Athar.
+
+### Product Specifications
+* **Platform**: iOS (iPhone, iPad)
+* **Bundle ID**: com.athar.furrfind
+* **Price**: Free to Download
+* **Primary Category**: Utilities
+* **Secondary Category**: Education
+* **Visual Identity**: Clean emerald-tinted minimalist UI featuring low-latency camera analysis overlays.
+
+### Product Links
+* **Product Homepage**: https://ai-grandfather.github.io/furrfind/
+* **Privacy Link**: https://ai-grandfather.github.io/furrfind/privacy-policy.html
+* **Terms Link**: https://ai-grandfather.github.io/furrfind/terms-of-use.html
+* **Deletion Matrix Link**: https://ai-grandfather.github.io/furrfind/data-deletion.html
