@@ -131,6 +131,7 @@ A high-accuracy utility application for iOS platforms built to perform computer 
 
 ### Product Links
 * **Product Homepage**: https://ai-grandfather.github.io/furrfind/
+* **Support Link**: https://ai-grandfather.github.io/furrfind/support.html
 * **Privacy Link**: https://ai-grandfather.github.io/furrfind/privacy-policy.html
 * **Terms Link**: https://ai-grandfather.github.io/furrfind/terms-of-use.html
 * **Deletion Matrix Link**: https://ai-grandfather.github.io/furrfind/data-deletion.html

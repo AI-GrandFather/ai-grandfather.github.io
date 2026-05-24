@@ -49,6 +49,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ai-grandfather.github.io/furrfind/support.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ai-grandfather.github.io/furrfind/terms-of-use.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
