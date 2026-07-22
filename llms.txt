@@ -73,7 +73,6 @@ Block Crush: Fun Puzzle Game is designed as an offline-first game, and much of t
 
 Depending on the app version and optional features used, the app may rely on third-party services for areas such as:
 - Advertising and consent handling
-- Facebook Login or similar authentication features
 - In-app purchases or subscriptions
 - Crash reporting, diagnostics, or usage-related service data where applicable
 
