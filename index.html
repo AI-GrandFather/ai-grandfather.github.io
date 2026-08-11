@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ai-grandfather.github.io/">
   <meta property="og:title" content="Block Crush: Fun Puzzle Game">
-  <meta property="og:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS.">
+  <meta property="og:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS and Android.">
   <meta property="og:image" content="https://ai-grandfather.github.io/app-icon.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://ai-grandfather.github.io/">
   <meta name="twitter:title" content="Block Crush: Fun Puzzle Game">
-  <meta name="twitter:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS.">
+  <meta name="twitter:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS and Android.">
   <meta name="twitter:image" content="https://ai-grandfather.github.io/app-icon.png">
 
   <script type="application/ld+json">
@@ -30,7 +30,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "Block Crush: Fun Puzzle Game",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS, Android",
         "applicationCategory": "GameApplication",
         "subCategory": "Puzzle, Strategy",
         "offers": {
@@ -53,7 +53,7 @@
             "name": "What is Block Crush: Fun Puzzle Game?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It is an independent minimalist puzzle application designed for iOS platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus."
+              "text": "It is an independent minimalist puzzle application designed for iOS and Android platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus."
             }
           },
           {
@@ -61,7 +61,7 @@
             "name": "How much does it cost to play?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The game is 100 percent free to download and install via the Apple App Store. There are zero mandatory paywalls, locked progression ranks, or hidden micropayments required to complete challenges."
+              "text": "The game is 100 percent free to download and install via the Apple App Store and Google Play. There are zero mandatory paywalls, locked progression ranks, or hidden micropayments required to complete challenges."
             }
           },
           {
@@ -90,10 +90,10 @@
           },
           {
             "@type": "Question",
-            "name": "Do you support all regions on the App Store?",
+            "name": "Do you support all regions?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, the product is published worldwide across all distribution regions supported by Apple App Store Connect. Its core layout relies completely on universal geometric patterns, requiring no local translation barriers."
+              "text": "Yes, the product is published across supported Apple App Store and Google Play distribution regions. Its core layout relies completely on universal geometric patterns, requiring no local translation barriers."
             }
           }
         ]
@@ -103,162 +103,816 @@
   </script>
 
   <style>
-    body { 
-      margin: 0; 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
-      color: white; 
+    :root {
+      color-scheme: dark;
+      --background: #050617;
+      --surface: rgba(12, 14, 41, 0.78);
+      --surface-strong: rgba(18, 20, 56, 0.94);
+      --border: rgba(255, 255, 255, 0.11);
+      --border-bright: rgba(255, 255, 255, 0.2);
+      --text: #f8f9ff;
+      --muted: #afb4d0;
+      --blue: #2f8cff;
+      --cyan: #35ddff;
+      --purple: #a63cff;
+      --gold: #ffce1f;
+      --orange: #ff7a16;
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-width: 320px;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 600px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 60px 30px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
-    h1 { 
-      font-size: 3.2em; 
-      margin: 0 0 8px 0;
-      font-weight: 800;
-      background: linear-gradient(45deg, #00d4ff, #5a67d8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    p.subtitle { 
-      font-size: 1.4em; 
-      opacity: 0.9; 
-      margin: 0 0 40px 0;
-    }
-    .app-icon {
-      width: 150px;
-      height: 150px;
-      border-radius: 30px;
-      border: 4px solid rgba(255,255,255,0.2);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-      margin: 30px auto;
-      display: block;
-    }
-    .app-store-badge {
-      margin-top: 30px;
-      display: inline-block;
-      background: white;
-      color: black;
-      padding: 15px 35px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      transition: all 0.3s;
-    }
-    .app-store-badge:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
-    
-    /* FAQ Section Styles (System 1, Step 5) */
-    .faq-section {
-      margin-top: 60px;
-      text-align: left;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 40px;
-    }
-    .faq-section h3 {
-      font-size: 1.8em;
-      margin-bottom: 30px;
-      text-align: center;
-      background: linear-gradient(45deg, #00d4ff, #5a67d8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .faq-item {
-      margin-bottom: 25px;
-      background: rgba(255,255,255,0.02);
-      padding: 20px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .faq-question {
-      font-weight: bold;
-      color: #00d4ff;
-      margin-bottom: 8px;
-      font-size: 1.1em;
-    }
-    .faq-answer {
-      font-size: 0.95em;
-      opacity: 0.85;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(47, 140, 255, 0.2), transparent 26rem),
+        radial-gradient(circle at 88% 16%, rgba(166, 60, 255, 0.17), transparent 25rem),
+        radial-gradient(circle at 54% 76%, rgba(255, 122, 22, 0.1), transparent 34rem),
+        var(--background);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.5;
     }
 
-    footer { margin-top: 60px; font-size: 0.95em; opacity: 0.7; }
-    a { color: #00d4ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      opacity: 0.3;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 76%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 92px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 44px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid rgba(53, 221, 255, 0.28);
+      border-radius: 13px;
+      background: linear-gradient(145deg, rgba(47, 140, 255, 0.26), rgba(166, 60, 255, 0.18));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 30px rgba(47, 140, 255, 0.14);
+      color: var(--cyan);
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.2;
+    }
+
+    .brand-copy strong {
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .brand-copy span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .top-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 15px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 650;
+      transition-property: color, background-color;
+      transition-duration: 160ms;
+      transition-timing-function: ease-out;
+    }
+
+    .top-links a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      align-items: center;
+      min-height: 630px;
+      padding: clamp(42px, 6vw, 76px);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      background: linear-gradient(145deg, rgba(18, 20, 56, 0.92), rgba(7, 8, 27, 0.84));
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      isolation: isolate;
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -14%;
+      bottom: -52%;
+      z-index: -1;
+      width: 690px;
+      height: 690px;
+      border-radius: 50%;
+      background: conic-gradient(from 220deg, rgba(47, 140, 255, 0.2), rgba(166, 60, 255, 0.16), rgba(255, 206, 31, 0.13), rgba(47, 140, 255, 0.2));
+      filter: blur(20px);
+      content: "";
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 610px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 36px;
+      margin-bottom: 24px;
+      padding: 0 14px;
+      border: 1px solid rgba(53, 221, 255, 0.24);
+      border-radius: 999px;
+      background: rgba(53, 221, 255, 0.07);
+      color: #c9f7ff;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5cff9d;
+      box-shadow: 0 0 0 4px rgba(92, 255, 157, 0.1), 0 0 14px rgba(92, 255, 157, 0.7);
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(3rem, 6.4vw, 5.75rem);
+      font-weight: 900;
+      letter-spacing: -0.065em;
+      line-height: 0.92;
+      text-wrap: balance;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 12px;
+      padding-bottom: 0.08em;
+      background: linear-gradient(100deg, var(--cyan) 5%, #7c82ff 42%, #d45cff 78%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.18rem);
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 24px 0 0;
+      padding: 0;
+      color: #dfe2f4;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .feature-list li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .feature-list li::before {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 9px rgba(255, 206, 31, 0.7);
+      content: "";
+    }
+
+    .store-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .store-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 202px;
+      min-height: 62px;
+      padding: 10px 18px;
+      border: 1px solid var(--border-bright);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff, #e9ebf5);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 #ffffff;
+      color: #080915;
+      text-align: left;
+      transition-property: transform, box-shadow, border-color;
+      transition-duration: 160ms;
+      transition-timing-function: ease-out;
+    }
+
+    .store-button:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.36), inset 0 1px 0 #ffffff;
+    }
+
+    .store-button:active {
+      transform: translateY(-1px) scale(0.97);
+    }
+
+    .store-button svg {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+    }
+
+    .store-button-copy {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .store-button-copy small {
+      margin-bottom: 4px;
+      font-size: 0.67rem;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+
+    .store-button-copy strong {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    .developer-credit {
+      margin: 20px 0 0;
+      color: #888eae;
+      font-size: 0.82rem;
+    }
+
+    .developer-credit strong {
+      color: #cdd1e5;
+      font-weight: 650;
+    }
+
+    .visual {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      min-height: 470px;
+      place-items: center;
+    }
+
+    .visual::before {
+      position: absolute;
+      width: min(42vw, 430px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 113, 255, 0.42), rgba(143, 39, 255, 0.16) 44%, transparent 70%);
+      filter: blur(10px);
+      content: "";
+    }
+
+    .icon-frame {
+      position: relative;
+      width: min(30vw, 330px);
+      min-width: 280px;
+      aspect-ratio: 1;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 29%;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 36px 80px rgba(0, 0, 0, 0.5), 0 0 70px rgba(44, 93, 255, 0.21), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .app-icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 26%;
+      object-fit: cover;
+      outline: 1px solid rgba(255, 255, 255, 0.12);
+      outline-offset: -1px;
+    }
+
+    .floating-pill {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 15px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 14px;
+      background: rgba(9, 10, 31, 0.78);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(16px);
+      color: #e9ebfa;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .floating-pill::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 3px;
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      box-shadow: 0 0 12px rgba(255, 174, 22, 0.75);
+      content: "";
+    }
+
+    .floating-pill.top {
+      top: 9%;
+      right: 0;
+      transform: rotate(2deg);
+    }
+
+    .floating-pill.bottom {
+      bottom: 8%;
+      left: 2%;
+      transform: rotate(-2deg);
+    }
+
+    .floating-pill.bottom::before {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 12px rgba(53, 221, 255, 0.7);
+    }
+
+    .faq-section {
+      padding: clamp(80px, 10vw, 128px) 0 80px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-heading p {
+      margin: 0 0 9px;
+      color: var(--cyan);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      letter-spacing: -0.045em;
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+
+    .faq-list {
+      display: grid;
+      max-width: 840px;
+      margin: 0 auto;
+      gap: 12px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(14px);
+      transition-property: border-color, background-color;
+      transition-duration: 160ms;
+      transition-timing-function: ease-out;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(53, 221, 255, 0.24);
+      background: var(--surface-strong);
+    }
+
+    .faq-question {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+      padding: 18px 64px 18px 22px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 720;
+      list-style: none;
+      text-wrap: pretty;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-question::after {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      display: grid;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--cyan);
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+      transform: translateY(-50%);
+      transition-property: transform, background-color;
+      transition-duration: 160ms;
+      transition-timing-function: ease-out;
+    }
+
+    .faq-item[open] .faq-question::after {
+      background: rgba(53, 221, 255, 0.09);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 96px;
+      padding: 24px 0 40px;
+      border-top: 1px solid var(--border);
+      color: #7f85a4;
+      font-size: 0.82rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px 20px;
+    }
+
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: #aeb3cc;
+      transition: color 150ms ease-out;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(53, 221, 255, 0.7);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-bottom: 28px;
+      }
+
+      .hero-copy {
+        max-width: 700px;
+      }
+
+      .visual {
+        min-height: 410px;
+        margin-top: 22px;
+      }
+
+      .icon-frame {
+        width: min(58vw, 330px);
+      }
+
+      .visual::before {
+        width: min(78vw, 480px);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .site-shell {
+        width: min(100% - 24px, 1160px);
+      }
+
+      .topbar {
+        min-height: 76px;
+      }
+
+      .top-links a:not(:last-child) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 34px 22px 20px;
+        border-radius: 26px;
+      }
+
+      .eyebrow {
+        margin-bottom: 20px;
+        font-size: 0.68rem;
+      }
+
+      h1 {
+        font-size: clamp(2.75rem, 15vw, 4.25rem);
+      }
+
+      .hero-description {
+        margin-top: 22px;
+        font-size: 1rem;
+      }
+
+      .feature-list {
+        gap: 8px 14px;
+        font-size: 0.82rem;
+      }
+
+      .store-links {
+        display: grid;
+      }
+
+      .store-button {
+        width: 100%;
+      }
+
+      .visual {
+        min-height: 340px;
+        margin-top: 24px;
+      }
+
+      .icon-frame {
+        min-width: 0;
+        width: min(68vw, 270px);
+      }
+
+      .floating-pill {
+        font-size: 0.7rem;
+      }
+
+      .floating-pill.top {
+        right: -6px;
+      }
+
+      .floating-pill.bottom {
+        left: -2px;
+      }
+
+      .faq-section {
+        padding: 76px 0 60px;
+      }
+
+      .faq-question {
+        min-height: 68px;
+        padding-left: 18px;
+        font-size: 0.94rem;
+      }
+
+      .faq-answer {
+        padding: 0 18px 20px;
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 8px;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+        gap: 0 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Mian Muhammad Athar</h1>
-    <p class="subtitle">Creator of Block Crush: Fun Puzzle Game</p>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Block Crush home">
+        <span class="brand-mark" aria-hidden="true">BC</span>
+        <span class="brand-copy">
+          <strong>Block Crush</strong>
+          <span>Independent puzzle game</span>
+        </span>
+      </a>
+      <nav class="top-links" aria-label="Main navigation">
+        <a href="#faq">FAQ</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
 
-    <img src="app-icon.png" alt="Block Crush: Fun Puzzle Game App Icon" class="app-icon">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available on iOS &amp; Android
+          </div>
+          <h1 id="hero-title">Block Crush:<span>Fun Puzzle Game</span></h1>
+          <p class="hero-description">A fast-paced, addictive block puzzle game. Clear lines, build satisfying combos, and see how high you can score.</p>
+          <ul class="feature-list" aria-label="Game highlights">
+            <li>Free to download</li>
+            <li>Works offline</li>
+            <li>No mandatory paywalls</li>
+          </ul>
 
-    <h2>Block Crush: Fun Puzzle Game</h2>
-    <p>A fast-paced, addictive block puzzle game.<br>Can you beat your high score?</p>
+          <div class="store-links" aria-label="Download Block Crush">
+            <a href="https://apps.apple.com/us/app/block-crush-fun-puzzle-game/id6755646573"
+               class="store-button"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Download Block Crush on the App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.32.03-1.75-.79-3.27-.79-1.53 0-2.01.77-3.26.82-1.31.05-2.3-1.32-3.14-2.53C4.27 17 2.96 12.45 4.72 9.39c.87-1.52 2.47-2.48 4.18-2.51 1.3-.03 2.54.87 3.26.87.7 0 2.28-1.11 3.84-.95.65.03 2.48.26 3.65 1.98-.09.06-2.18 1.28-2.16 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.46 2.87M13.2 3.4C13.82 2.69 14.86 2.15 15.82 2c.13 1-.26 2.01-.85 2.73-.59.72-1.56 1.27-2.5 1.2-.15-.98.35-1.99.73-2.53Z"/>
+              </svg>
+              <span class="store-button-copy">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.blockcrush.flutter"
+               class="store-button"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Get Block Crush on Google Play">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <defs>
+                  <linearGradient id="play-gradient" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#16d9e3"/>
+                    <stop offset="0.48" stop-color="#32c67a"/>
+                    <stop offset="0.49" stop-color="#ffcc32"/>
+                    <stop offset="0.72" stop-color="#ff9f1a"/>
+                    <stop offset="0.73" stop-color="#ff4d62"/>
+                    <stop offset="1" stop-color="#e9325c"/>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#play-gradient)" d="M4.5 2.6a1.5 1.5 0 0 0-.5 1.1v16.6a1.5 1.5 0 0 0 .5 1.1L14 12 4.5 2.6Zm10.7 8.2L7.1 2.9l10.4 5.9-2.3 2Zm0 2.4 2.3 2L7.1 21.1l8.1-7.9Zm3.6-3.6 1.6.9a1.7 1.7 0 0 1 0 3l-1.6.9-2.7-2.4 2.7-2.4Z"/>
+              </svg>
+              <span class="store-button-copy">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="developer-credit">Created by <strong>Mian Muhammad Athar</strong></p>
+        </div>
 
-    <a href="https://apps.apple.com/us/app/block-scramble/id6755646573" 
-       class="app-store-badge" 
-       target="_blank">
-      Download on the App Store
-    </a>
+        <div class="visual">
+          <div class="floating-pill top">Pure puzzle play</div>
+          <div class="icon-frame">
+            <img src="app-icon.png" alt="Block Crush: Fun Puzzle Game App Icon" class="app-icon">
+          </div>
+          <div class="floating-pill bottom">Made for focus</div>
+        </div>
+      </section>
 
-    <div class="faq-section">
-      <h3>Frequently Asked Questions</h3>
-      
-      <div class="faq-item">
-        <div class="faq-question">What is Block Crush: Fun Puzzle Game?</div>
-        <div class="faq-answer">It is an independent minimalist puzzle application designed for iOS platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus.</div>
-      </div>
+      <section class="faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p>Good to know</p>
+          <h2 id="faq-title">Frequently Asked Questions</h2>
+        </div>
 
-      <div class="faq-item">
-        <div class="faq-question">How much does it cost to play?</div>
-        <div class="faq-answer">The game is 100 percent free to download and install via the Apple App Store. There are zero mandatory paywalls, locked progression ranks, or hidden micropayments required to complete challenges.</div>
-      </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">What is Block Crush: Fun Puzzle Game?</summary>
+            <div class="faq-answer">It is an independent minimalist puzzle application designed for iOS and Android platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus.</div>
+          </details>
 
-      <div class="faq-item">
-        <div class="faq-question">Do you need an active internet connection to complete levels?</div>
-        <div class="faq-answer">No. The entire puzzle calculation engine runs locally inside your mobile operating ecosystem. It remains 100 percent functional offline without any cellular data connection or active wireless network link.</div>
-      </div>
+          <details class="faq-item">
+            <summary class="faq-question">How much does it cost to play?</summary>
+            <div class="faq-answer">The game is 100 percent free to download and install via the Apple App Store and Google Play. There are zero mandatory paywalls, locked progression ranks, or hidden micropayments required to complete challenges.</div>
+          </details>
 
-      <div class="faq-item">
-        <div class="faq-question">What makes this game different from standard puzzle apps?</div>
-        <div class="faq-answer">This application deliberately omits loud arcade loops, flashing banners, and modern attention-grabbing menus. It utilizes a dark ambient color scheme crafted to assist deep focus and reduce cognitive stress.</div>
-      </div>
+          <details class="faq-item">
+            <summary class="faq-question">Do you need an active internet connection to complete levels?</summary>
+            <div class="faq-answer">No. The entire puzzle calculation engine runs locally inside your mobile operating ecosystem. It remains 100 percent functional offline without any cellular data connection or active wireless network link.</div>
+          </details>
 
-      <div class="faq-item">
-        <div class="faq-question">How long does a typical puzzle session last?</div>
-        <div class="faq-answer">Individual rounds possess no forced operational countdown timers and last until you run out of empty grid placements. Game sessions scale dynamically, lasting from a quick two-minute logic break to a twenty-minute strategy layout run.</div>
-      </div>
+          <details class="faq-item">
+            <summary class="faq-question">What makes this game different from standard puzzle apps?</summary>
+            <div class="faq-answer">This application deliberately omits loud arcade loops, flashing banners, and modern attention-grabbing menus. It utilizes a dark ambient color scheme crafted to assist deep focus and reduce cognitive stress.</div>
+          </details>
 
-      <div class="faq-item">
-        <div class="faq-question">Do you support all regions on the App Store?</div>
-        <div class="faq-answer">Yes, the product is published worldwide across all distribution regions supported by Apple App Store Connect. Its core layout relies completely on universal geometric patterns, requiring no local translation barriers.</div>
-      </div>
-    </div>
+          <details class="faq-item">
+            <summary class="faq-question">How long does a typical puzzle session last?</summary>
+            <div class="faq-answer">Individual rounds possess no forced operational countdown timers and last until you run out of empty grid placements. Game sessions scale dynamically, lasting from a quick two-minute logic break to a twenty-minute strategy layout run.</div>
+          </details>
 
-    <footer>
-      <p>
-        <a href="privacy-policy.html">Privacy Policy</a> • 
-        <a href="terms-of-use.html">Terms of Use</a> • 
-        <a href="data-deletion.html">Data Deletion</a> • 
-        <a href="support.html">Support</a> • 
-        <a href="app-ads.txt">app-ads.txt</a><br>
-        © 2026 Mian Muhammad Athar
-      </p>
+          <details class="faq-item">
+            <summary class="faq-question">Do you support all regions?</summary>
+            <div class="faq-answer">Yes, the product is published across supported Apple App Store and Google Play distribution regions. Its core layout relies completely on universal geometric patterns, requiring no local translation barriers.</div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Mian Muhammad Athar</span>
+      <nav class="footer-links" aria-label="Legal and support">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="data-deletion.html">Data Deletion</a>
+        <a href="support.html">Support</a>
+        <a href="app-ads.txt">app-ads.txt</a>
+      </nav>
     </footer>
   </div>
 </body>
