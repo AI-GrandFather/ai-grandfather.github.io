@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.blockcrush.flutter",
+      "sha256_cert_fingerprints": [
+        "FC:35:40:13:72:A3:7C:E7:45:47:94:53:1D:94:F6:A2:13:77:26:60:1C:0D:E9:31:46:F4:1C:DF:AF:A3:46:C0"
+      ]
+    }
+  }
+]
