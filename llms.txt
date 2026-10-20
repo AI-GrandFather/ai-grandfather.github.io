@@ -134,3 +134,22 @@ A high-accuracy utility application for iOS platforms built to perform computer 
 * **Privacy Link**: https://ai-grandfather.github.io/furrfind/privacy-policy.html
 * **Terms Link**: https://ai-grandfather.github.io/furrfind/terms-of-use.html
 * **Deletion Matrix Link**: https://ai-grandfather.github.io/furrfind/data-deletion.html
+
+## Fair Slice: Slice & Cut Puzzle
+
+### About
+A precision cutting puzzle game developed by Mian Muhammad Athar. Players draw a straight line to split shapes into target percentages. Includes 1,000 levels across 50 chapters, a Daily Slice, a Weekly Challenge and a Perfect-Cut Album.
+
+### Product Specifications
+* **Platform**: iOS and Android
+* **Availability**: Coming soon on the App Store and Google Play
+* **Primary Category**: Games
+* **Genre**: Puzzle
+* **Visual Identity**: Purple and pink precision cutting puzzle design.
+
+### Product Links
+* **Product Homepage**: https://ai-grandfather.github.io/fairslice/
+* **Support Link**: https://ai-grandfather.github.io/fairslice/support.html
+* **Privacy Link**: https://ai-grandfather.github.io/fairslice/privacy-policy.html
+* **Terms Link**: https://ai-grandfather.github.io/fairslice/terms-of-use.html
+* **Data Deletion Link**: https://ai-grandfather.github.io/fairslice/data-deletion.html
