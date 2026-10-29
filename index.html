@@ -8,18 +8,18 @@
 
   <meta name="apple-itunes-app" content="app-id=6755646573">
 
-  <title>Block Crush: Fun Puzzle Game</title>
-  <meta name="description" content="Play Block Crush: Fun Puzzle Game! An addictive grid strategy puzzle to sharpen your mind. Clear lines, match cubes, and train your brain free.">
+  <title>Block Crush: Classic Puzzle</title>
+  <meta name="description" content="Play Block Crush: Classic Puzzle! An addictive grid strategy puzzle to sharpen your mind. Clear lines, match cubes, and train your brain free.">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ai-grandfather.github.io/">
-  <meta property="og:title" content="Block Crush: Fun Puzzle Game">
+  <meta property="og:title" content="Block Crush: Classic Puzzle">
   <meta property="og:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS and Android.">
   <meta property="og:image" content="https://ai-grandfather.github.io/app-icon.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://ai-grandfather.github.io/">
-  <meta name="twitter:title" content="Block Crush: Fun Puzzle Game">
+  <meta name="twitter:title" content="Block Crush: Classic Puzzle">
   <meta name="twitter:description" content="An addictive grid strategy brain training puzzle. Clear lines, stack high score combos, and challenge your mind. Available now on iOS and Android.">
   <meta name="twitter:image" content="https://ai-grandfather.github.io/app-icon.png">
 
@@ -29,7 +29,7 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "name": "Block Crush: Fun Puzzle Game",
+        "name": "Block Crush: Classic Puzzle",
         "operatingSystem": "iOS, Android",
         "applicationCategory": "GameApplication",
         "subCategory": "Puzzle, Strategy",
@@ -50,7 +50,7 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is Block Crush: Fun Puzzle Game?",
+            "name": "What is Block Crush: Classic Puzzle?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "It is an independent minimalist puzzle application designed for iOS and Android platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus."
@@ -298,7 +298,8 @@
       box-shadow: 0 0 0 4px rgba(92, 255, 157, 0.1), 0 0 14px rgba(92, 255, 157, 0.7);
     }
 
-    h1 {
+    h1,
+    .slide-title {
       max-width: 720px;
       margin: 0;
       font-size: clamp(3rem, 6.4vw, 5.75rem);
@@ -308,7 +309,8 @@
       text-wrap: balance;
     }
 
-    h1 span {
+    h1 span,
+    .slide-title span {
       display: block;
       margin-top: 12px;
       padding-bottom: 0.08em;
@@ -698,7 +700,8 @@
         font-size: 0.68rem;
       }
 
-      h1 {
+      h1,
+      .slide-title {
         font-size: clamp(2.75rem, 15vw, 4.25rem);
       }
 
@@ -842,6 +845,72 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .hero-slider {
+      display: grid;
+    }
+
+    .hero-slider .slide {
+      grid-area: 1 / 1;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .hero-slider .slide.is-active {
+      visibility: visible;
+      opacity: 1;
+      animation: slide-in 0.6s ease;
+    }
+
+    .slide-title {
+      font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+    }
+
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(24px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 22px 0 64px;
+    }
+
+    .slider-dots button {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: var(--border-bright);
+      cursor: pointer;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+
+    .slider-dots button[aria-selected="true"] {
+      width: 34px;
+      background: var(--cyan);
+    }
+
+    .status-dot.soon {
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(255, 206, 31, 0.1), 0 0 14px rgba(255, 206, 31, 0.7);
+    }
+
+    .app-icon.tile {
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--cyan), var(--blue) 55%, var(--purple));
+      color: var(--text);
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slider .slide.is-active { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -862,13 +931,14 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-slider" aria-roledescription="carousel" aria-label="Our games">
+      <section class="hero slide is-active" id="slide-1" role="tabpanel" aria-labelledby="hero-title">
         <div class="hero-copy">
           <div class="eyebrow">
             <span class="status-dot" aria-hidden="true"></span>
             Available on iOS &amp; Android
           </div>
-          <h1 id="hero-title">Block Crush:<span>Fun Puzzle Game</span></h1>
+          <h1 id="hero-title">Block Crush:<span>Classic Puzzle</span></h1>
           <p class="hero-description">A fast-paced, addictive block puzzle game. Clear lines, build satisfying combos, and see how high you can score.</p>
           <ul class="feature-list" aria-label="Game highlights">
             <li>Free to download</li>
@@ -920,11 +990,85 @@
         <div class="visual">
           <div class="floating-pill top">Pure puzzle play</div>
           <div class="icon-frame">
-            <img src="app-icon.png" alt="Block Crush: Fun Puzzle Game App Icon" class="app-icon">
+            <img src="app-icon.png" alt="Block Crush: Classic Puzzle App Icon" class="app-icon">
           </div>
           <div class="floating-pill bottom">Made for focus</div>
         </div>
       </section>
+
+      <section class="hero slide" id="slide-2" role="tabpanel" aria-labelledby="slide-2-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot soon" aria-hidden="true"></span>
+            Coming soon to iOS &amp; Android
+          </div>
+          <h2 class="slide-title" id="slide-2-title">Fair Slice:<span>Slice &amp; Cut Puzzle</span></h2>
+          <p class="hero-description">A precision cutting puzzle. Draw one straight line and split each shape into exact shares. Every level sets a new target.</p>
+          <ul class="feature-list" aria-label="Fair Slice: highlights">
+            <li>1,000 levels in 50 chapters</li>
+            <li>Daily Slice and Weekly Challenge</li>
+            <li>Perfect-Cut Album</li>
+          </ul>
+
+          <div class="store-links">
+            <a href="/fairslice/" class="store-button" aria-label="Fair Slice">
+              <span class="store-button-copy">
+                <small>Learn more</small>
+                <strong>Fair Slice</strong>
+              </span>
+            </a>
+          </div>
+          <p class="developer-credit">Created by <strong>Mian Muhammad Athar</strong></p>
+        </div>
+
+        <div class="visual">
+          <div class="floating-pill top">Cut it exactly</div>
+          <div class="icon-frame">
+            <img src="fairslice/app-icon.png" alt="Fair Slice: Slice &amp; Cut Puzzle App Icon" class="app-icon">
+          </div>
+          <div class="floating-pill bottom">One straight line</div>
+        </div>
+      </section>
+
+      <section class="hero slide" id="slide-3" role="tabpanel" aria-labelledby="slide-3-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot soon" aria-hidden="true"></span>
+            Coming soon to iOS &amp; Android
+          </div>
+          <h2 class="slide-title" id="slide-3-title">Match Tales:<span>Puzzle Adventure</span></h2>
+          <p class="hero-description">A bright match 3 puzzle game. Swap, match and blast your way through thousands of colorful levels with Rockets, TNT, Propellers and the Prism Orb.</p>
+          <ul class="feature-list" aria-label="Match Tales: highlights">
+            <li>Free to play</li>
+            <li>Plays offline</li>
+            <li>Rewarded ads only, never forced</li>
+          </ul>
+
+          <div class="store-links">
+            <a href="/matchtales/" class="store-button" aria-label="Match Tales">
+              <span class="store-button-copy">
+                <small>Learn more</small>
+                <strong>Match Tales</strong>
+              </span>
+            </a>
+          </div>
+          <p class="developer-credit">Created by <strong>Mian Muhammad Athar</strong></p>
+        </div>
+
+        <div class="visual">
+          <div class="floating-pill top">Swap &amp; match</div>
+          <div class="icon-frame">
+            <div class="app-icon tile" role="img" aria-label="Match Tales App Icon">MT</div>
+          </div>
+          <div class="floating-pill bottom">Big combos</div>
+        </div>
+      </section>
+      </div>
+      <div class="slider-dots" role="tablist" aria-label="Choose a game">
+        <button type="button" role="tab" aria-selected="true" aria-controls="slide-1" aria-label="Block Crush"></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="slide-2" aria-label="Fair Slice"></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="slide-3" aria-label="Match Tales"></button>
+      </div>
 
       <section class="games-section" id="games" aria-labelledby="games-title">
         <div class="section-heading">
@@ -959,7 +1103,7 @@
 
         <div class="faq-list">
           <details class="faq-item" open>
-            <summary class="faq-question">What is Block Crush: Fun Puzzle Game?</summary>
+            <summary class="faq-question">What is Block Crush: Classic Puzzle?</summary>
             <div class="faq-answer">It is an independent minimalist puzzle application designed for iOS and Android platforms. The gameplay core focuses on strategic line clearances and geometric block layout matching to stimulate logical focus.</div>
           </details>
 
@@ -1005,5 +1149,28 @@
       </nav>
     </footer>
   </div>
+  <script>
+    (function () {
+      var slider = document.querySelector(".hero-slider");
+      if (!slider) return;
+      var slides = slider.querySelectorAll(".slide");
+      var dots = document.querySelectorAll(".slider-dots button");
+      var current = 0, timer = null;
+      var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function show(i) {
+        current = (i + slides.length) % slides.length;
+        slides.forEach(function (s, k) { s.classList.toggle("is-active", k === current); });
+        dots.forEach(function (d, k) { d.setAttribute("aria-selected", k === current ? "true" : "false"); });
+      }
+      function start() { if (!still) { stop(); timer = setInterval(function () { show(current + 1); }, 6000); } }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      dots.forEach(function (d, k) { d.addEventListener("click", function () { show(k); start(); }); });
+      slider.addEventListener("mouseenter", stop);
+      slider.addEventListener("mouseleave", start);
+      slider.addEventListener("focusin", stop);
+      slider.addEventListener("focusout", start);
+      start();
+    })();
+  </script>
 </body>
 </html>
