@@ -6,3 +6,5 @@ bfc5888 2026-07-22 16:39 PKT Phase 1 — Repopulate root web pages and update ap
 ff5a7ab 2026-09-14 20:32 PKT Phase 1 — Configure Android App Links for Block Crush
 34c1e9a 2026-09-14 20:56 PKT Phase 1 — Add Google Play App Signing key fingerprint to assetlinks.json
 84ea6ec 2026-10-30 16:55 PKT Phase 1 — Add app-ads.txt and footer links for Fair Slice and Match Tales
+
+(this commit) 2026-11-11T14:55:11+05:00 PKT Phase 1 — Expand Block Crush privacy and deletion pages with verified service disclosures and regional privacy controls.
