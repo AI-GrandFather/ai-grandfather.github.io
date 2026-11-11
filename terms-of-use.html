@@ -1,377 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of Use – Block Crush: Classic Puzzle</title>
-  <meta name="description" content="Terms of Use for Block Crush: Classic Puzzle.">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #ffffff;
-      --accent: #6366f1;
-      --accent-2: #4f46e5;
-      --text: #1e293b;
-      --muted: #475569;
-      --heading: #0f172a;
-      --border: #e2e8f0;
-      --shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-      min-height: 100vh;
-      padding: 24px;
-      color: var(--text);
-    }
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      background: var(--card);
-      border-radius: 26px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      animation: fadeIn .45s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #4338ca 0%, #6366f1 55%, #a855f7 100%);
-      color: white;
-      padding: 48px 32px 36px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      width: 68px;
-      height: 68px;
-      border-radius: 18px;
-      object-fit: cover;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-
-    .brand-text h1 {
-      font-size: 1.5rem;
-      margin-bottom: 4px;
-    }
-
-    .brand-text p {
-      opacity: 0.92;
-      font-size: 0.98rem;
-    }
-
-    .nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.2);
-      font-size: 0.95rem;
-    }
-
-    .hero h2 {
-      font-size: 2.45rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.08rem;
-      max-width: 760px;
-      line-height: 1.7;
-      opacity: 0.96;
-    }
-
-    .updated {
-      background: linear-gradient(135deg, #e0e7ff 0%, #fae8ff 100%);
-      color: #3730a3;
-      text-align: center;
-      padding: 14px 20px;
-      font-weight: 700;
-      border-bottom: 1px solid #c7d2fe;
-    }
-
-    .content {
-      padding: 34px 28px 36px;
-      background: #ffffff;
-    }
-
-    .section {
-      margin-bottom: 20px;
-      padding: 24px;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      border: 1px solid #e2e8f0;
-      border-left: 5px solid var(--accent);
-      border-radius: 18px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(99, 102, 241, 0.12);
-    }
-
-    .section h3 {
-      color: var(--heading);
-      font-size: 1.32rem;
-      margin-bottom: 14px;
-    }
-
-    .section p,
-    .section li {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 1rem;
-    }
-
-    .section p + p { margin-top: 10px; }
-
-    ul {
-      margin-top: 12px;
-      padding-left: 20px;
-    }
-
-    li + li { margin-top: 8px; }
-
-    .callout {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-      margin-top: 14px;
-      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.08);
-    }
-
-    a {
-      color: var(--accent-2);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover { text-decoration: underline; }
-
-    .footer {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: white;
-      text-align: center;
-      padding: 28px 24px;
-    }
-
-    .footer p {
-      opacity: 0.92;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 640px) {
-      body { padding: 14px; }
-      .hero { padding: 32px 20px 26px; }
-      .content { padding: 22px 18px 26px; }
-      .section { padding: 18px; }
-      .hero h2 { font-size: 2rem; }
-      .brand img { width: 56px; height: 56px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use | Block Crush: Classic Puzzle</title>
+<meta name="description" content="Terms for using Block Crush: Classic Puzzle, including purchases, subscriptions, virtual items and your consumer rights.">
+<link rel="canonical" href="https://ai-grandfather.github.io/terms-of-use.html">
+<link rel="icon" href="app-icon.png" type="image/png">
+<style>
+*{box-sizing:border-box}html{color-scheme:dark;scroll-padding-top:1rem}body{margin:0;background:#0d1b33;color:#e6eef8;font:17px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:40px 20px}.container{max-width:800px;margin:auto;background:#ffffff08;border:1px solid #50beff33;padding:40px;border-radius:16px}h1,h2{line-height:1.25}h1{font-size:clamp(1.9rem,5vw,2.65rem);color:#ffe28a}h2{color:#5cc8ff;margin-top:2rem;font-size:1.35rem}a{color:#8fd8ff;text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere}a:hover{color:#ffe28a}a:focus-visible{outline:3px solid #ffd23f;outline-offset:4px}.muted{color:#b5c4d9;font-size:.95rem}.toc{margin:24px 0;padding:20px 24px;border-radius:14px;background:#16294a;border:1px solid #5cc8ff44}.toc h2{margin-top:0}.toc ol{padding-left:22px}.toc li{margin:5px 0}section{padding:0 4px;scroll-margin-top:20px}footer{margin-top:36px;padding-top:22px;border-top:1px solid #ffffff26;font-size:.95rem}nav{display:flex;flex-wrap:wrap;gap:8px 20px}nav a{padding:6px 0}.skip{position:absolute;left:16px;top:-100px;background:#0d1b33;padding:12px;z-index:5}.skip:focus{top:12px}ul{padding-left:24px}li{margin-bottom:8px}@media(max-width:600px){body{padding:16px 12px}.container{padding:24px 18px}.toc{padding:16px}}@media print{html{color-scheme:light}body{background:#fff;color:#111;padding:0;font-size:12pt}.container{max-width:none;border:0;padding:0;background:#fff}h1,h2,a,.muted{color:#111}.toc{background:#fff;border:1px solid #888}header nav,footer,.skip{display:none}a{text-decoration:underline}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header class="hero">
-      <div class="topbar">
-        <div class="brand">
-          <img src="app-icon.png" alt="Block Crush: Classic Puzzle app icon">
-          <div class="brand-text">
-            <h1>Block Crush: Classic Puzzle</h1>
-            <p>Official Terms of Use</p>
-          </div>
-        </div>
-
-        <nav class="nav">
-          <a href="./">Home</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="data-deletion.html">Data Deletion</a>
-          <a href="support.html">Support</a>
-        </nav>
-      </div>
-
-      <h2>Terms of Use</h2>
-      <p>
-        These Terms of Use govern your access to and use of the Block Crush: Classic Puzzle mobile game,
-        website, and related services provided by AI Grandfather.
-      </p>
-    </header>
-
-    <div class="updated">
-      Last Updated: July 22, 2026
-    </div>
-
-    <main class="content">
-      <section class="section">
-        <h3>1. Acceptance of Terms</h3>
-        <p>
-          By downloading, accessing, or using Block Crush: Classic Puzzle, you agree to be bound by these Terms of Use.
-          If you do not agree, please do not use the app.
-        </p>
-        <p>
-          If you use the app on behalf of another person or organization, you confirm that you have authority to accept
-          these Terms for that person or organization. Mandatory consumer rights that cannot be limited by law are not
-          excluded by these Terms.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>2. Use of the App</h3>
-        <p>Block Crush: Classic Puzzle is provided for personal, lawful entertainment use only. You agree not to:</p>
-        <ul>
-          <li>Use the app for unlawful, abusive, or fraudulent purposes.</li>
-          <li>Attempt to interfere with, reverse engineer, disrupt, or exploit the app.</li>
-          <li>Use cheats, bots, automation, or unauthorized modifications.</li>
-          <li>Misuse any login, leaderboard, premium, or account-linked feature.</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h3>3. Accounts and Login Services</h3>
-        <p>
-          Some features may now or in the future allow sign-in through Apple or other supported authentication services.
-          If you use such features, you are responsible for activity associated with your account and for keeping
-          your login credentials secure.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>4. In-App Purchases</h3>
-        <p>
-          The app may offer optional in-app purchases or premium features. Payments are processed by Apple through
-          the App Store and are subject to Apple's own billing, refund, and subscription rules.
-        </p>
-        <p>
-          If the app offers subscriptions, they renew automatically unless cancelled through your Apple Account settings
-          before the renewal date. Prices, taxes, free trials, renewal periods, cancellation options, and refund eligibility
-          are shown by Apple at purchase time and managed through Apple. We cannot access your full payment card details,
-          directly issue Apple refunds, or change Apple billing records.
-        </p>
-        <p>
-          Restorable purchases should be restored through the in-app restore option or the App Store account used for the
-          original purchase. If an App Store transaction fails, is delayed, is declined, or is refunded by Apple, access to
-          the related paid feature may be unavailable or removed.
-        </p>
-        <div class="callout">
-          <strong>Important:</strong> We do not directly process or store your payment card information.
-        </div>
-      </section>
-
-      <section class="section">
-        <h3>5. Intellectual Property</h3>
-        <p>
-          All game content, branding, code, graphics, user interface elements, sounds, logos, and related materials
-          are owned by AI Grandfather / Block Crush: Classic Puzzle or used with permission and are protected by applicable laws.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>6. Privacy</h3>
-        <p>
-          Your use of Block Crush: Classic Puzzle is also governed by our
-          <a href="privacy-policy.html">Privacy Policy</a>.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>7. Service Changes</h3>
-        <p>
-          We may update, improve, modify, suspend, or discontinue any feature of the app at any time.
-          We may also revise these Terms when needed to reflect product or legal changes.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>8. International Availability</h3>
-        <p>
-          The app may be available to users in multiple countries, including the United States, the United Kingdom,
-          Germany, Switzerland, and other App Store regions. You are responsible for using the app only where lawful and
-          only in compliance with local rules that apply to you.
-        </p>
-        <p>
-          Nothing in these Terms limits rights that cannot legally be limited in your country or region, including
-          mandatory consumer protection rights in the United Kingdom, European Union member states such as Germany,
-          Switzerland, or United States state law where applicable.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>9. Disclaimer</h3>
-        <p>
-          Block Crush: Classic Puzzle is provided on an "as is" and "as available" basis. To the maximum extent permitted by law,
-          we make no warranties regarding availability, uninterrupted use, error-free operation, data preservation,
-          accuracy, merchantability, fitness for a particular purpose, or non-infringement.
-        </p>
-        <p>
-          Game progress, scores, achievements, leaderboard status, premium access, and account-linked features may be
-          affected by device changes, operating system changes, account issues, App Store availability, network issues,
-          third-party service changes, or discontinuation of the app.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>10. Limitation of Liability</h3>
-        <p>
-          To the fullest extent permitted by law, AI Grandfather shall not be liable for any indirect, incidental,
-          special, punitive, exemplary, or consequential damages, lost profits, lost revenue, lost data, lost goodwill,
-          business interruption, device problems, or claims arising from use of, or inability to use, the app.
-        </p>
-        <p>
-          To the fullest extent permitted by law, total liability for any claim relating to the app is limited to the
-          amount you paid directly for the app or in-app purchase at issue during the six months before the claim arose.
-          For free features, that amount may be zero. This limitation does not exclude liability that cannot legally be
-          excluded, such as liability for fraud, intentional misconduct, or other non-waivable rights.
-        </p>
-      </section>
-
-      <section class="section">
-        <h3>11. Contact</h3>
-        <div class="callout">
-          <p><strong>Block Crush: Classic Puzzle / AI Grandfather</strong></p>
-          <p>Email: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a></p>
-          <p>Website: <a href="https://ai-grandfather.github.io/">https://ai-grandfather.github.io/</a></p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Block Crush: Classic Puzzle</p>
-      <p>© 2026 AI Grandfather. All rights reserved.</p>
-    </footer>
-  </div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="container">
+<header><a class="brand" href="index.html">Block Crush: Classic Puzzle</a><nav aria-label="Main navigation"><a href="index.html">Game</a><a href="terms-of-use.html" aria-current="page">Terms of Use</a><a href="privacy-policy.html">Privacy</a><a href="data-deletion.html">Data Deletion</a><a href="support.html">Support</a></nav></header>
+<main id="main">
+<h1>Terms of Use</h1><p class="muted">Last updated: <time datetime="2026-11-11">November 11, 2026</time></p>
+<nav class="toc" aria-label="Terms contents"><h2>Contents</h2><ol><li><a href="#section-1">About these Terms</a></li><li><a href="#section-2">Use of the game</a></li><li><a href="#section-3">Your licence</a></li><li><a href="#section-4">Progress, accounts and online services</a></li><li><a href="#section-5">Purchases and subscriptions</a></li><li><a href="#section-6">Virtual items</a></li><li><a href="#section-7">Rewarded ads</a></li><li><a href="#section-8">Fair play</a></li><li><a href="#section-9">Ownership and third-party services</a></li><li><a href="#section-10">Changes and availability</a></li><li><a href="#section-11">Disclaimers and liability</a></li><li><a href="#section-12">Ending use</a></li><li><a href="#section-13">Applicable law and disputes</a></li><li><a href="#section-14">Consumer rights</a></li><li><a href="#section-15">Apple and Google terms</a></li><li><a href="#section-16">Changes and contact</a></li></ol></nav>
+<section aria-labelledby="section-1"><h2 id="section-1">1. About these Terms</h2><p>These Terms apply to Block Crush: Classic Puzzle (“Block Crush” or “the game”), its website and player support. The publisher is Mian Muhammad Athar, an independent developer based in Pakistan and publishing as AI Grandfather (“we”, “us”). Contact: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a>.</p><p>By using the game, you agree to these Terms and the <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree, stop using the game. If you are not old enough to agree under the laws where you live, a parent or guardian should review these Terms with you and supervise your use.</p></section>
+<section aria-labelledby="section-2"><h2 id="section-2">2. Use of the game</h2><p>Block Crush is provided for personal, lawful entertainment. Do not use cheats, bots, unauthorized modifications, or exploits; interfere with the game or its services; or use the game for unlawful or fraudulent purposes. These Terms do not restrict rights that cannot lawfully be restricted, including any legally protected right to reverse engineer for interoperability.</p></section>
+<section aria-labelledby="section-3"><h2 id="section-3">3. Your licence</h2><p>Subject to these Terms and applicable store rules, we grant you a personal, limited, non-exclusive, non-transferable licence to download and use the game on devices you own or control for non-commercial entertainment. You may not sell, rent, sublicense or distribute the game. We and our licensors keep all rights not expressly granted to you.</p></section>
+<section aria-labelledby="section-4"><h2 id="section-4">4. Progress, accounts and online services</h2><p>Game progress and settings are stored locally by default. Some versions or features may offer optional recovery or platform gaming services; availability depends on platform and configuration. Local progress can be lost when app data is removed, a device is changed, or a service becomes unavailable. Recovery is not guaranteed. Do not treat local or online scores, achievements or progress as a cash-valued asset.</p></section>
+<section aria-labelledby="section-5"><h2 id="section-5">5. Purchases and subscriptions</h2><p>Depending on platform, region and availability, the game may offer consumable products such as coins, bundles or power-ups, and Premium subscriptions. The current catalog includes weekly, monthly and yearly Premium subscription products. The product name, features, price, currency, billing period, renewal terms and any trial terms presented by Apple App Store or Google Play at checkout govern that purchase. Subscription cancellation and refund requests are handled through the store account used to purchase, under the store's rules and applicable law.</p><p>Stores process payments; we do not receive your full payment-card details. Transactions may be checked by the game and its configured purchase-verification service before items or Premium access are delivered. A purchase may remain pending or fail verification; do not assume an item or entitlement is active until the game confirms delivery. Restore eligible purchases through the in-game restore feature when available.</p></section>
+<section aria-labelledby="section-6"><h2 id="section-6">6. Virtual items</h2><p>Coins, power-ups, bundles, Premium benefits and other in-game items are digital features for use within Block Crush. They have no cash value, are not redeemable for money or goods outside the game, and may not be sold or transferred except where applicable law requires otherwise. Items are subject to the relevant store transaction and game entitlement; unauthorized manipulation or duplication is prohibited. We may adjust game content or item functionality where permitted by law, while respecting non-waivable rights and applicable purchase terms.</p></section>
+<section aria-labelledby="section-7"><h2 id="section-7">7. Rewarded ads</h2><p>The game may offer optional rewarded ads. Availability depends on connection, region, provider availability, app configuration and privacy choices. A reward is granted only when the ad service reports completion and the game confirms delivery. You do not have to watch an optional rewarded ad to use the game. Third-party ads and advertised products are provided by their respective providers. See the <a href="privacy-policy.html">Privacy Policy</a> for related information.</p></section>
+<section aria-labelledby="section-8"><h2 id="section-8">8. Fair play</h2><p>Do not tamper with the game, its data or purchase process, interfere with advertising or platform services, or attempt to obtain items or entitlements without authorization. We may limit access to affected features when reasonably necessary to protect the game, players or service providers, subject to applicable law and consumer rights.</p></section>
+<section aria-labelledby="section-9"><h2 id="section-9">9. Ownership and third-party services</h2><p>The game, including its code, artwork, sound, text, name and design, is owned by us or our licensors and protected by law. Third-party services such as Apple, Google, Firebase, advertising providers and platform gaming services are governed by their own terms and privacy notices. These Terms do not make us responsible for independent third-party services.</p></section>
+<section aria-labelledby="section-10"><h2 id="section-10">10. Changes and availability</h2><p>We may update the game to maintain, secure or improve it and may change, suspend or discontinue a feature where reasonably necessary. Online features depend on network and third-party availability. We will give notice where practical and where required by law. Nothing here removes rights that apply to paid digital content or services.</p></section>
+<section aria-labelledby="section-11"><h2 id="section-11">11. Disclaimers and liability</h2><p>To the extent permitted by law, the game is provided “as is” and “as available”. We do not promise uninterrupted availability, error-free operation, compatibility with every device or preservation of local progress. Nothing in these Terms excludes warranties or remedies that applicable law does not allow us to exclude.</p><p>To the extent permitted by law, we are not liable for indirect or unforeseeable losses arising from use of the game. Nothing limits liability that cannot lawfully be limited, including applicable liability for death or personal injury, fraud, or breach of mandatory consumer rights.</p></section>
+<section aria-labelledby="section-12"><h2 id="section-12">12. Ending use</h2><p>You can stop using the game at any time by deleting it. We may suspend or end access to a feature if reasonably needed for security, legal compliance or serious misuse, subject to applicable law. Terms that by their nature continue after use ends, including ownership, disclaimers, liability limits and dispute provisions, remain in effect to the extent allowed by law.</p></section>
+<section aria-labelledby="section-13"><h2 id="section-13">13. Applicable law and disputes</h2><p>Applicable law and the court competent to hear a dispute are determined under the conflict-of-law and jurisdiction rules that apply to your circumstances. These Terms do not require exclusive litigation in Pakistan, impose mandatory arbitration or waive a class or representative procedure, or remove protections available in your home jurisdiction. You may contact us to seek an informal resolution, but doing so is not a prerequisite to a court, regulator or statutory remedy.</p></section>
+<section aria-labelledby="section-14"><h2 id="section-14">14. Consumer rights</h2><p>If mandatory consumer-protection or digital-content laws apply where you live, those rights take priority over any inconsistent term here. You may have remedies for paid digital content or services that do not conform to applicable requirements. Nothing in these Terms limits a right that cannot be waived.</p></section>
+<section aria-labelledby="section-15"><h2 id="section-15">15. Apple and Google terms</h2><p>For the iOS version distributed through Apple's App Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard End User License Agreement</a> governs the app licence. These Terms supplement it; if they conflict about the app licence, Apple's Standard EULA controls. Apple is not responsible for providing maintenance or support for the game; support requests should be sent to us.</p><p>For a version distributed through Google Play, the Google Play Terms of Service and applicable Google Play billing terms also apply. Store billing rules govern payments made through that store.</p></section>
+<section aria-labelledby="section-16"><h2 id="section-16">16. Changes and contact</h2><p>We may revise these Terms as the game or applicable requirements change. The date above identifies the latest revision. Where required, we will give notice and obtain renewed acceptance. Contact Mian Muhammad Athar, publishing as AI Grandfather, Pakistan: <a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a>. Please include “Block Crush” in the subject.</p></section>
+</main>
+<footer><nav aria-label="Main navigation"><a href="index.html">Game</a><a href="terms-of-use.html" aria-current="page">Terms of Use</a><a href="privacy-policy.html">Privacy</a><a href="data-deletion.html">Data Deletion</a><a href="support.html">Support</a></nav><p>Published by Mian Muhammad Athar as AI Grandfather, Pakistan.<br><a href="mailto:atharmushtaq9@gmail.com">atharmushtaq9@gmail.com</a></p><p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a> · <a href="index.html">AI Grandfather studio</a></p><p class="muted">© 2026 Mian Muhammad Athar</p></footer>
+</div>
 </body>
 </html>
