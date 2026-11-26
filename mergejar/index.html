@@ -3,28 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Support, privacy, terms and data deletion information for Merge Jar.">
-<link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="site.css">
 <title>Merge Jar: Drop Puzzle</title>
+<meta name="description" content="Merge Jar is a colorful physics puzzle from AI Grandfather. Drop matching pieces, make bigger merges, and see how much you can fit in the jar.">
+<link rel="canonical" href="https://ai-grandfather.github.io/mergejar/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-grandfather.github.io/mergejar/">
+<meta property="og:title" content="Merge Jar: Drop Puzzle">
+<meta property="og:description" content="Drop matching pieces, make bigger merges, and see how much you can fit in the jar.">
+<meta property="og:image" content="https://ai-grandfather.github.io/mergejar/assets/icon.png">
+<meta property="og:image:alt" content="Colorful fruit pieces in the Merge Jar app icon">
+<link rel="icon" href="assets/icon.png" type="image/png">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="masthead">
-  <a href="./" class="brand"><img src="assets/logo.png" alt="Merge Jar" width="155" height="48"></a>
-  <nav aria-label="Main"><a href="privacy-policy.html">Privacy</a><a href="support.html">Support</a></nav>
+  <a href="./" class="brand" aria-current="page"><img src="assets/logo.png" alt="Merge Jar home" width="155" height="48"></a>
+  <nav aria-label="Main navigation">
+    <a href="#how-to-play">How to play</a>
+    <a href="support.html">Support</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </nav>
 </header>
-<main>
-  <article class="article">
-    <h1>Merge Jar</h1>
-    <p>Player support and policies for Merge Jar by AI Grandfather.</p>
-    <nav aria-label="Merge Jar resources"><ul>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="terms-of-use.html">Terms of Use</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="data-deletion.html">Data Deletion</a></li>
-    </ul></nav>
-  </article>
+<main id="main">
+  <section class="hero" aria-labelledby="game-title">
+    <div>
+      <h1 id="game-title">Merge Jar:<br>Drop Puzzle</h1>
+      <p>Drop matching pieces, make bigger merges, and see how much you can fit in the jar.</p>
+      <a class="button" href="#how-to-play">How to play</a>
+    </div>
+    <img class="hero-art" src="assets/icon.png" alt="A piece of fruit dropping into a glass jar filled with colorful fruit" width="440" height="440" fetchpriority="high">
+  </section>
+
+  <section class="landing-section" id="how-to-play" aria-labelledby="play-title">
+    <h2 id="play-title">How to play</h2>
+    <ol class="play-steps">
+      <li><h3>Aim and drop</h3><p>Choose where your next piece lands. Pieces roll and settle as the jar fills.</p></li>
+      <li><h3>Make a match</h3><p>When two identical pieces touch, they combine into a bigger one.</p></li>
+      <li><h3>Keep space open</h3><p>Plan your next move, use a booster when you need room, and try to beat your best score.</p></li>
+    </ol>
+  </section>
+
+  <section class="landing-section" aria-labelledby="worlds-title">
+    <h2 id="worlds-title">Choose a jar</h2>
+    <p>Build up to a watermelon in Fruit Merge, stack cakes in the bakery, or discover ocean creatures in their own jar. Each theme has its own pieces and best score.</p>
+    <div class="worlds">
+      <figure><img src="assets/fruit.png" alt="" width="160" height="160" loading="lazy"><figcaption>Fruit Merge</figcaption></figure>
+      <figure><img src="assets/cake.png" alt="" width="160" height="160" loading="lazy"><figcaption>Cake Merge</figcaption></figure>
+      <figure><img src="assets/ocean.png" alt="" width="160" height="160" loading="lazy"><figcaption>Ocean Merge</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="landing-section faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Frequently asked questions</h2>
+    <details><summary>Where can I get Merge Jar?</summary><p>Official download links will appear here when the store listings are available.</p></details>
+    <details><summary>Do I need an account?</summary><p>No account is required. Your scores, settings and jar progress are stored on your device.</p></details>
+    <details><summary>Can I play offline?</summary><p>The core puzzle runs on your device. Ads and rewarded videos require an internet connection.</p></details>
+    <details><summary>Where can I get help?</summary><p>Visit <a href="support.html">Player Support</a> for help with the game or questions about your progress.</p></details>
+  </section>
 </main>
-<footer><p>Merge Jar · AI Grandfather</p><nav aria-label="Legal"><a href="privacy-policy.html">Privacy</a><a href="terms-of-use.html">Terms</a><a href="support.html">Support</a><a href="data-deletion.html">Data deletion</a></nav></footer>
+<footer>
+  <p>Published by Mian Muhammad Athar as <a href="../">AI Grandfather</a>.</p>
+  <nav aria-label="Player policies">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="support.html">Support</a>
+    <a href="data-deletion.html">Data Deletion</a>
+  </nav>
+</footer>
 </body>
 </html>
